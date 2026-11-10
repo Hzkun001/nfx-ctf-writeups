@@ -1,0 +1,1 @@
+(a:=True,b:=a+a,c:=b+b,d:=c+c,e:=d+d,f:=e+e,g:=f+f,u:=chr(g+f-a),getattr(als,u+u+chr(a+b+c+f+g)+chr(c+d+f+g)+chr(a+b+c+d+f+g)+chr(b+f+g)+chr(a+f+g)+chr(c+d+f+g)+chr(a+b+e+f+g)+u+u).get(u+chr(b+c+e+g)+chr(a+g)+chr(a+c+e+g)+chr(c+d+g)+chr(c+e+g)+u+chr(a+b+e+g)+chr(c+e+g)+chr(a+g)+chr(c+e+g)+chr(a+c+g)))[-a]

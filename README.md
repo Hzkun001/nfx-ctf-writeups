@@ -27,7 +27,7 @@ gambar di bagian ini setelah berkasnya tersedia.
 
 | Difficulty | Indeks | Status |
 | --- | --- | --- |
-| Medium | [Lihat daftar](medium/README.md) | 1 writeup: Dokodemo Door |
+| Medium | [Lihat daftar](medium/README.md) | 2 writeup: Dokodemo Door, The Alchemist's Sandbox |
 | Hard | [Lihat daftar](hard/README.md) | 1 writeup: My Lovely Freya |
 | Insane | [Lihat daftar](insane/README.md) | Menunggu konfirmasi daftar challenge |
 

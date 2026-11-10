@@ -13,7 +13,9 @@ Writeup challenge dengan difficulty **Medium** pada platform NFX CTF.
 | Miscellaneous & Logic | [Lihat writeup](miscellaneous-logic/README.md) |
 
 Kategori lain menunggu konfirmasi label resmi platform. Challenge yang
-sudah dikonfirmasi: [Dokodemo Door](miscellaneous-logic/dokodemo-door/README.md)
-(Miscellaneous & Logic).
+sudah dikonfirmasi pada Miscellaneous & Logic:
+
+- [Dokodemo Door](miscellaneous-logic/dokodemo-door/README.md)
+- [The Alchemist's Sandbox](miscellaneous-logic/the-alchemists-sandbox/README.md)
 
 Simpan setiap writeup di `medium/kategori/nama-challenge/README.md`.
