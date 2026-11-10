@@ -12,7 +12,8 @@ Writeup challenge dengan difficulty **Medium** pada platform NFX CTF.
 | Boot to Root | [Lihat writeup](boot-to-root/README.md) |
 | Miscellaneous & Logic | [Lihat writeup](miscellaneous-logic/README.md) |
 
-Kategori lain menunggu konfirmasi label resmi platform. Challenge belum
-ditempatkan sampai difficulty dan kategorinya dikonfirmasi.
+Kategori lain menunggu konfirmasi label resmi platform. Challenge yang
+sudah dikonfirmasi: [Dokodemo Door](miscellaneous-logic/dokodemo-door/README.md)
+(Miscellaneous & Logic).
 
 Simpan setiap writeup di `medium/kategori/nama-challenge/README.md`.

@@ -4,7 +4,6 @@
 
 Tantangan miscellaneous, logika, dan mekanisme khusus.
 
-Belum ada writeup yang ditempatkan dalam kategori ini.
-
-Gunakan satu folder per challenge, kemudian tambahkan tautannya di sini.
-Setiap entri memuat nama challenge, tautan writeup, dan status verifikasi.
+| Challenge | Writeup | Verifikasi |
+| --- | --- | --- |
+| Dokodemo Door | [Baca penyelesaian](dokodemo-door/README.md) | Lokal; struktur PDF, checksum stream, dan XOR balik |
