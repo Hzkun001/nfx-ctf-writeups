@@ -27,7 +27,7 @@ gambar di bagian ini setelah berkasnya tersedia.
 
 | Difficulty | Indeks | Status |
 | --- | --- | --- |
-| Medium | [Lihat daftar](medium/README.md) | 3 writeup: Dokodemo Door, The Alchemist's Sandbox, Stay |
+| Medium | [Lihat daftar](medium/README.md) | 4 writeup: Dokodemo Door, The Alchemist's Sandbox, Stay, Art Evidence Secret |
 | Hard | [Lihat daftar](hard/README.md) | 1 writeup: My Lovely Freya |
 | Insane | [Lihat daftar](insane/README.md) | Menunggu konfirmasi daftar challenge |
 
@@ -46,7 +46,8 @@ diterima platform. Prefiks dan kapitalisasi flag dipertahankan sesuai hasil.
 │   ├── binary-exploit-pwn/
 │   ├── reverse-engineering/
 │   ├── boot-to-root/
-│   └── miscellaneous-logic/
+│   ├── miscellaneous-logic/
+│   └── forensics/
 ├── hard/
 │   └── README.md
 ├── insane/

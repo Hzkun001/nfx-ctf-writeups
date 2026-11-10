@@ -11,6 +11,7 @@ Writeup challenge dengan difficulty **Medium** pada platform NFX CTF.
 | Reverse Engineering | [Lihat writeup](reverse-engineering/README.md) |
 | Boot to Root | [Lihat writeup](boot-to-root/README.md) |
 | Miscellaneous & Logic | [Lihat writeup](miscellaneous-logic/README.md) |
+| Forensics | [Lihat writeup](forensics/README.md) |
 
 Kategori lain menunggu konfirmasi label resmi platform. Challenge yang
 sudah dikonfirmasi pada Miscellaneous & Logic:
@@ -18,5 +19,9 @@ sudah dikonfirmasi pada Miscellaneous & Logic:
 - [Dokodemo Door](miscellaneous-logic/dokodemo-door/README.md)
 - [The Alchemist's Sandbox](miscellaneous-logic/the-alchemists-sandbox/README.md)
 - [Stay](miscellaneous-logic/stay/README.md)
+
+Challenge yang sudah dikonfirmasi pada Forensics:
+
+- [Art Evidence Secret](forensics/art-evidence-secret/README.md)
 
 Simpan setiap writeup di `medium/kategori/nama-challenge/README.md`.
