@@ -3,6 +3,9 @@
 Dokumentasi penyelesaian challenge NFX CTF oleh [Hzkun001](https://github.com/Hzkun001).
 Repositori ini mencakup difficulty **Medium, Hard, dan Insane**.
 
+> Branch `draft-matryoska` memuat [draf WU Matryoska](drafts/matryoska/README.md).
+> Kategori dan difficulty draf ini masih menunggu konfirmasi.
+
 > **Status: draf persiapan pengumpulan.** Identitas peserta, screenshot
 > scoreboard akhir, serta daftar writeup masih perlu dilengkapi.
 
