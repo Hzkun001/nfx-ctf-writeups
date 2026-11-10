@@ -41,7 +41,12 @@ diterima platform. Prefiks dan kapitalisasi flag dipertahankan sesuai hasil.
 .
 ├── README.md
 ├── medium/
-│   └── README.md
+│   ├── README.md
+│   ├── web-exploitation/
+│   ├── binary-exploit-pwn/
+│   ├── reverse-engineering/
+│   ├── boot-to-root/
+│   └── miscellaneous-logic/
 ├── hard/
 │   └── README.md
 ├── insane/
@@ -53,27 +58,37 @@ diterima platform. Prefiks dan kapitalisasi flag dipertahankan sesuai hasil.
     └── WRITEUP.md
 ```
 
-Untuk setiap challenge, gunakan susunan berikut di dalam folder difficulty:
+Folder kategori yang sama tersedia di dalam `medium/`, `hard/`, dan
+`insane/`. Setiap challenge ditempatkan di bawah difficulty dan kategorinya:
 
 ```text
-medium/nama-challenge/
+medium/web-exploitation/nama-challenge/
 ├── README.md          # Ringkasan dan langkah penyelesaian
 ├── solve.py           # Jika solver diperlukan
 └── assets/            # Screenshot atau bukti yang dirujuk dalam writeup
 ```
 
-Kategori teknis, seperti Crypto, Misc, Web, atau Forensics, dicatat pada
-masing-masing writeup. Indeks utama dikelompokkan menurut difficulty.
+| Kategori | Nama folder |
+| --- | --- |
+| Web Exploitation | `web-exploitation/` |
+| Binary Exploit (Pwn) | `binary-exploit-pwn/` |
+| Reverse Engineering | `reverse-engineering/` |
+| Boot to Root | `boot-to-root/` |
+| Miscellaneous & Logic | `miscellaneous-logic/` |
+
+Daftar kategori masih menunggu pelengkapan menjadi delapan kategori sesuai
+label resmi platform. Nama yang belum dikonfirmasi belum dibuatkan folder.
 
 ## Menambah writeup
 
 1. Pastikan challenge termasuk Medium, Hard, atau Insane sesuai platform.
-2. Buat folder menggunakan nama challenge dengan huruf kecil dan tanda hubung.
+2. Pilih subfolder kategori yang sesuai, lalu buat folder challenge dengan
+   huruf kecil dan tanda hubung.
 3. Salin [`templates/WRITEUP.md`](templates/WRITEUP.md) menjadi `README.md`
    di folder challenge, lalu isi dan hapus semua penanda yang belum lengkap.
 4. Tulis langkah yang menghasilkan flag. Cantumkan perintah, output penting,
    dan kebutuhan solver agar hasil dapat diulang.
-5. Tambahkan tautan ke indeks difficulty terkait. Sertakan bukti penerimaan
+5. Tambahkan tautan ke indeks kategori terkait. Sertakan bukti penerimaan
    flag bila tersedia, tanpa membuat klaim accepted berdasarkan uji lokal saja.
 
 ## Penggunaan AI

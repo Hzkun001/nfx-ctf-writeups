@@ -2,7 +2,7 @@
 
 | Informasi | Nilai |
 | --- | --- |
-| Kategori | [Crypto / Misc / Web / Pwn / Reverse / Forensics / lainnya] |
+| Kategori | [Nama kategori sesuai label platform dan folder induk] |
 | Difficulty | [Medium / Hard / Insane, sesuai platform] |
 | Author | [Nama author, bila tersedia] |
 | Lampiran / sumber | [Tautan soal atau lampiran] |
