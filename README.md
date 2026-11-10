@@ -28,7 +28,7 @@ gambar di bagian ini setelah berkasnya tersedia.
 | Difficulty | Indeks | Status |
 | --- | --- | --- |
 | Medium | [Lihat daftar](medium/README.md) | Menunggu konfirmasi daftar challenge |
-| Hard | [Lihat daftar](hard/README.md) | Menunggu konfirmasi daftar challenge |
+| Hard | [Lihat daftar](hard/README.md) | 1 writeup: My Lovely Freya |
 | Insane | [Lihat daftar](insane/README.md) | Menunggu konfirmasi daftar challenge |
 
 Setiap writeup memuat nama challenge, deskripsi singkat, alur penyelesaian,

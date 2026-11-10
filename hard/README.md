@@ -12,7 +12,8 @@ Writeup challenge dengan difficulty **Hard** pada platform NFX CTF.
 | Boot to Root | [Lihat writeup](boot-to-root/README.md) |
 | Miscellaneous & Logic | [Lihat writeup](miscellaneous-logic/README.md) |
 
-Kategori lain menunggu konfirmasi label resmi platform. Challenge belum
-ditempatkan sampai difficulty dan kategorinya dikonfirmasi.
+Kategori lain menunggu konfirmasi label resmi platform. Challenge yang
+sudah dikonfirmasi: [My Lovely Freya](miscellaneous-logic/my-lovely-freya/README.md)
+(Miscellaneous & Logic).
 
 Simpan setiap writeup di `hard/kategori/nama-challenge/README.md`.
