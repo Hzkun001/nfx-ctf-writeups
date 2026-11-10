@@ -12,6 +12,7 @@ Writeup challenge dengan difficulty **Medium** pada platform NFX CTF.
 | Boot to Root | [Lihat writeup](boot-to-root/README.md) |
 | Miscellaneous & Logic | [Lihat writeup](miscellaneous-logic/README.md) |
 | Forensics | [Lihat writeup](forensics/README.md) |
+| Crypto | [Lihat writeup](crypto/README.md) |
 
 Kategori lain menunggu konfirmasi label resmi platform. Challenge yang
 sudah dikonfirmasi pada Miscellaneous & Logic:
@@ -23,5 +24,9 @@ sudah dikonfirmasi pada Miscellaneous & Logic:
 Challenge yang sudah dikonfirmasi pada Forensics:
 
 - [Art Evidence Secret](forensics/art-evidence-secret/README.md)
+
+Challenge yang sudah dikonfirmasi pada Crypto:
+
+- [Black Box Protocol N4T0](crypto/blackbox-protocol-n4t0/README.md)
 
 Simpan setiap writeup di `medium/kategori/nama-challenge/README.md`.

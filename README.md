@@ -27,7 +27,7 @@ gambar di bagian ini setelah berkasnya tersedia.
 
 | Difficulty | Indeks | Status |
 | --- | --- | --- |
-| Medium | [Lihat daftar](medium/README.md) | 4 writeup: Dokodemo Door, The Alchemist's Sandbox, Stay, Art Evidence Secret |
+| Medium | [Lihat daftar](medium/README.md) | 5 writeup: Dokodemo Door, The Alchemist's Sandbox, Stay, Art Evidence Secret, Black Box Protocol N4T0 |
 | Hard | [Lihat daftar](hard/README.md) | 1 writeup: My Lovely Freya |
 | Insane | [Lihat daftar](insane/README.md) | Menunggu konfirmasi daftar challenge |
 
@@ -47,7 +47,8 @@ diterima platform. Prefiks dan kapitalisasi flag dipertahankan sesuai hasil.
 │   ├── reverse-engineering/
 │   ├── boot-to-root/
 │   ├── miscellaneous-logic/
-│   └── forensics/
+│   ├── forensics/
+│   └── crypto/
 ├── hard/
 │   └── README.md
 ├── insane/
