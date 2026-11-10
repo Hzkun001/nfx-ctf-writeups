@@ -11,9 +11,11 @@ Writeup challenge dengan difficulty **Hard** pada platform NFX CTF.
 | Reverse Engineering | [Lihat writeup](reverse-engineering/README.md) |
 | Boot to Root | [Lihat writeup](boot-to-root/README.md) |
 | Miscellaneous & Logic | [Lihat writeup](miscellaneous-logic/README.md) |
+| Crypto | [Lihat writeup](crypto/README.md) |
 
 Kategori lain menunggu konfirmasi label resmi platform. Challenge yang
 sudah dikonfirmasi: [My Lovely Freya](miscellaneous-logic/my-lovely-freya/README.md)
-(Miscellaneous & Logic).
+(Miscellaneous & Logic) dan [Broken Signature Scheme](crypto/broken-signature-scheme/README.md)
+(Crypto).
 
 Simpan setiap writeup di `hard/kategori/nama-challenge/README.md`.
