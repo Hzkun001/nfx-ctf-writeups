@@ -8,3 +8,4 @@ Tantangan miscellaneous, logika, dan mekanisme khusus.
 | --- | --- | --- |
 | Dokodemo Door | [Baca penyelesaian](dokodemo-door/README.md) | Lokal; struktur PDF, checksum stream, dan XOR balik |
 | The Alchemist's Sandbox | [Baca penyelesaian](the-alchemists-sandbox/README.md) | Lokal; sandbox asli dan enkripsi ulang vault |
+| Stay | [Baca penyelesaian](stay/README.md) | Lokal; pengodean balik simbol dan UTF-8 identik |

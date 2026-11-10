@@ -17,5 +17,6 @@ sudah dikonfirmasi pada Miscellaneous & Logic:
 
 - [Dokodemo Door](miscellaneous-logic/dokodemo-door/README.md)
 - [The Alchemist's Sandbox](miscellaneous-logic/the-alchemists-sandbox/README.md)
+- [Stay](miscellaneous-logic/stay/README.md)
 
 Simpan setiap writeup di `medium/kategori/nama-challenge/README.md`.
