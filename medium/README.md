@@ -25,6 +25,10 @@ Challenge yang sudah dikonfirmasi pada Forensics:
 
 - [Art Evidence Secret](forensics/art-evidence-secret/README.md)
 
+Challenge yang sudah dikonfirmasi pada Binary Exploit (Pwn):
+
+- [Pipa Nu Kotor](binary-exploit-pwn/pipa-nu-kotor/README.md)
+
 Challenge yang sudah dikonfirmasi pada Crypto:
 
 - [Black Box Protocol N4T0](crypto/blackbox-protocol-n4t0/README.md)

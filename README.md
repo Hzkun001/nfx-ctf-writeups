@@ -27,7 +27,7 @@ gambar di bagian ini setelah berkasnya tersedia.
 
 | Difficulty | Indeks | Status |
 | --- | --- | --- |
-| Medium | [Lihat daftar](medium/README.md) | 6 writeup: Dokodemo Door, The Alchemist's Sandbox, Stay, Art Evidence Secret, Black Box Protocol N4T0, ECDSA Nonce Bias |
+| Medium | [Lihat daftar](medium/README.md) | 7 writeup: Dokodemo Door, The Alchemist's Sandbox, Stay, Art Evidence Secret, Black Box Protocol N4T0, ECDSA Nonce Bias, Pipa Nu Kotor |
 | Hard | [Lihat daftar](hard/README.md) | 2 writeup: My Lovely Freya, Broken Signature Scheme |
 | Insane | [Lihat daftar](insane/README.md) | Menunggu konfirmasi daftar challenge |
 
