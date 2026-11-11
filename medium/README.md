@@ -28,5 +28,6 @@ Challenge yang sudah dikonfirmasi pada Forensics:
 Challenge yang sudah dikonfirmasi pada Crypto:
 
 - [Black Box Protocol N4T0](crypto/blackbox-protocol-n4t0/README.md)
+- [ECDSA Nonce Bias](crypto/ecdsa-nonce-bias/README.md)
 
 Simpan setiap writeup di `medium/kategori/nama-challenge/README.md`.
