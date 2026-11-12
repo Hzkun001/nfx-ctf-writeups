@@ -14,9 +14,11 @@ Writeup challenge dengan difficulty **Hard** pada platform NFX CTF.
 | Crypto | [Lihat writeup](crypto/README.md) |
 
 Kategori lain menunggu konfirmasi label resmi platform. Challenge yang
-sudah dikonfirmasi: [My Lovely Freya](miscellaneous-logic/my-lovely-freya/README.md)
-(Miscellaneous & Logic), [Broken Signature Scheme](crypto/broken-signature-scheme/README.md)
-(Crypto), dan [TheForgottenState](binary-exploit-pwn/theforgottenstate/README.md)
-(Binary Exploit (Pwn)).
+sudah dikonfirmasi:
+- [My Lovely Freya](miscellaneous-logic/my-lovely-freya/README.md) (Miscellaneous & Logic)
+- [Broken Signature Scheme](crypto/broken-signature-scheme/README.md) (Crypto)
+- [FlagKeepers](crypto/flagkeepers/README.md) (Crypto)
+- [Unbreakable Delay](crypto/unbreakable-delay/README.md) (Crypto)
+- [TheForgottenState](binary-exploit-pwn/theforgottenstate/README.md) (Binary Exploit (Pwn))
 
 Simpan setiap writeup di `hard/kategori/nama-challenge/README.md`.

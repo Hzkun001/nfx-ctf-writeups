@@ -28,6 +28,8 @@ Challenge yang sudah dikonfirmasi pada Miscellaneous & Logic:
 Challenge yang sudah dikonfirmasi pada Forensics:
 
 - [Art Evidence Secret](forensics/art-evidence-secret/README.md)
+- [Wujud Aseli Atmin](forensics/wujud-aseli-atmin/README.md)
+- [SymHell](forensics/symhell/README.md)
 
 Challenge yang sudah dikonfirmasi pada Binary Exploit (Pwn):
 
