@@ -1,11 +1,11 @@
 # Unbreakable Delay
 
-[Indeks kategori](../README.md) · [Hard](../../README.md) · [Indeks utama](../../../README.md)
+[Indeks kategori](../README.md) · [Medium](../../README.md) · [Indeks utama](../../../README.md)
 
 | Informasi | Nilai |
 | --- | --- |
 | Kategori | Crypto |
-| Difficulty | Hard |
+| Difficulty | Medium |
 | Author | Kad |
 | Lampiran / sumber | [assets/sample_parameters.json](assets/sample_parameters.json) |
 | Layanan | `nc s1.nfx.my.id 43118` |

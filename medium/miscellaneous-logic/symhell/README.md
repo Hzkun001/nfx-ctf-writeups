@@ -4,7 +4,7 @@
 
 | Informasi | Nilai |
 | --- | --- |
-| Kategori | Forensics / Jail |
+| Kategori | Miscellaneous & Logic |
 | Difficulty | Medium |
 | Author | Ariaf |
 | Lampiran / sumber | [assets/app.py](assets/app.py) (pada repositori soal: `foren/symhell/app.py`) |

@@ -24,21 +24,27 @@ Challenge yang sudah dikonfirmasi pada Miscellaneous & Logic:
 - [Dokodemo Door](miscellaneous-logic/dokodemo-door/README.md)
 - [The Alchemist's Sandbox](miscellaneous-logic/the-alchemists-sandbox/README.md)
 - [Stay](miscellaneous-logic/stay/README.md)
+- [Wujud Aseli Atmin](miscellaneous-logic/wujud-aseli-atmin/README.md)
+- [SymHell](miscellaneous-logic/symhell/README.md)
 
 Challenge yang sudah dikonfirmasi pada Forensics:
 
 - [Art Evidence Secret](forensics/art-evidence-secret/README.md)
-- [Wujud Aseli Atmin](forensics/wujud-aseli-atmin/README.md)
-- [SymHell](forensics/symhell/README.md)
 
 Challenge yang sudah dikonfirmasi pada Binary Exploit (Pwn):
 
 - [Pipa Nu Kotor](binary-exploit-pwn/pipa-nu-kotor/README.md)
 - [NFXCTF Convention](binary-exploit-pwn/nfxctf-convention/README.md)
 
+Challenge yang sudah dikonfirmasi pada Boot to Root:
+
+- [Forgotten Commit](boot-to-root/forgotten-commit/README.md)
+
 Challenge yang sudah dikonfirmasi pada Crypto:
 
 - [Black Box Protocol N4T0](crypto/blackbox-protocol-n4t0/README.md)
 - [ECDSA Nonce Bias](crypto/ecdsa-nonce-bias/README.md)
+- [Unbreakable Delay](crypto/unbreakable-delay/README.md)
+- [Feistel Differential](crypto/feistel-differential/README.md)
 
 Simpan setiap writeup di `medium/kategori/nama-challenge/README.md`.

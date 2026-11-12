@@ -4,7 +4,7 @@
 
 | Informasi | Nilai |
 | --- | --- |
-| Kategori | Forensics |
+| Kategori | Miscellaneous & Logic |
 | Difficulty | Medium |
 | Author | Ariaf |
 | Lampiran / sumber | [assets/dokumentasi.png](assets/dokumentasi.png) |

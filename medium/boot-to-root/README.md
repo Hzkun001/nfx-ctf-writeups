@@ -4,7 +4,8 @@
 
 Alur akses awal hingga mencapai tujuan akses pada mesin tantangan.
 
-Belum ada writeup yang ditempatkan dalam kategori ini.
+| Challenge | Writeup | Verifikasi |
+| --- | --- | --- |
+| Forgotten Commit | [Baca penyelesaian](forgotten-commit/README.md) | Lokal; pemulihan commit Git, inspeksi dangling blob via git fsck, dan dekripsi XOR stream |
 
-Gunakan satu folder per challenge, kemudian tambahkan tautannya di sini.
-Setiap entri memuat nama challenge, tautan writeup, dan status verifikasi.
+Simpan setiap writeup di `medium/kategori/nama-challenge/README.md`.
