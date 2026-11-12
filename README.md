@@ -27,9 +27,9 @@ gambar di bagian ini setelah berkasnya tersedia.
 
 | Difficulty | Indeks | Status |
 | --- | --- | --- |
-| Medium | [Lihat daftar](medium/README.md) | 9 writeup: NexaPartner, NexaIdentity, Dokodemo Door, The Alchemist's Sandbox, Stay, Art Evidence Secret, Black Box Protocol N4T0, ECDSA Nonce Bias, Pipa Nu Kotor |
-| Hard | [Lihat daftar](hard/README.md) | 2 writeup: My Lovely Freya, Broken Signature Scheme |
-| Insane | [Lihat daftar](insane/README.md) | Menunggu konfirmasi daftar challenge |
+| Medium | [Lihat daftar](medium/README.md) | 10 writeup: NexaPartner, NexaIdentity, Dokodemo Door, The Alchemist's Sandbox, Stay, Art Evidence Secret, Black Box Protocol N4T0, ECDSA Nonce Bias, Pipa Nu Kotor, NFXCTF Convention |
+| Hard | [Lihat daftar](hard/README.md) | 3 writeup: My Lovely Freya, Broken Signature Scheme, TheForgottenState |
+| Insane | [Lihat daftar](insane/README.md) | 1 writeup: NarrowGate |
 
 Setiap writeup memuat nama challenge, deskripsi singkat, alur penyelesaian,
 dan string flag utuh. Bukti verifikasi lokal dibedakan dari bukti bahwa flag

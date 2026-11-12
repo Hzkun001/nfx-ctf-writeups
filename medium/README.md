@@ -32,6 +32,7 @@ Challenge yang sudah dikonfirmasi pada Forensics:
 Challenge yang sudah dikonfirmasi pada Binary Exploit (Pwn):
 
 - [Pipa Nu Kotor](binary-exploit-pwn/pipa-nu-kotor/README.md)
+- [NFXCTF Convention](binary-exploit-pwn/nfxctf-convention/README.md)
 
 Challenge yang sudah dikonfirmasi pada Crypto:
 
