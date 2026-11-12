@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin audit — NexaPartner</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="announcement">NexaPartner · Reseller and partner portal · Settlement runs on the 5th of each month</div>
+  <nav class="navbar">
+    <a class="brand" href="/">Nexa<span>Partner</span></a>
+    <div class="nav-links">
+      
+        <a href="/dashboard">Dashboard</a>
+        <a href="/settings">Settings</a>
+        <a href="/api-docs">API docs</a>
+        <a href="/admin/audit">Admin audit</a>
+      
+    </div>
+    <div class="nav-actions">
+      
+        <span class="nav-user">Arunika Retail Group</span>
+        <a class="btn btn-ghost" href="/logout">Sign out</a>
+      
+    </div>
+  </nav>
+
+  <main class="container">
+
+
+<section class="page-head">
+  <div>
+    <span class="eyebrow">Partner Operations</span>
+    <h1>Partner audit console</h1>
+    <p>Restricted audit trail for partner settlements, API key reviews, and recovery records.</p>
+  </div>
+  <span class="pill pill-role">Administrator</span>
+</section>
+
+<section class="stats-row">
+  <article class="stat-card">
+    <span>Audit entries</span>
+    <strong>3</strong>
+    <small>Last 30 days</small>
+  </article>
+  <article class="stat-card">
+    <span>Partners</span>
+    <strong>3</strong>
+    <small>Active in the program</small>
+  </article>
+  <article class="stat-card">
+    <span>Settlement</span>
+    <strong class="stat-text">On track</strong>
+    <small>Next run 5 October</small>
+  </article>
+  <article class="stat-card">
+    <span>Access</span>
+    <strong class="stat-text">Restricted</strong>
+    <small>Partner Operations only</small>
+  </article>
+</section>
+
+<div class="detail-grid">
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Audit log</h2>
+      <span class="pill pill-danger">Sensitive</span>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>When</th><th>Actor</th><th>Action</th><th>Note</th></tr></thead>
+        <tbody>
+          
+            <tr>
+              <td class="muted">2024-09-19 02:00</td>
+              <td><strong>system</strong></td>
+              <td>Nightly partner settlement export completed</td>
+              <td class="muted">Settlement file handed to Finance.</td>
+            </tr>
+          
+            <tr>
+              <td class="muted">2024-09-18 16:44</td>
+              <td><strong>admin</strong></td>
+              <td>Partner recovery token rotated</td>
+              <td class="muted">Temporary partner console recovery token: NFX{js0n_pr0t0_p0llut10n_4dm1n_byp4ss}</td>
+            </tr>
+          
+            <tr>
+              <td class="muted">2024-09-17 11:12</td>
+              <td><strong>admin</strong></td>
+              <td>API key scope review completed</td>
+              <td class="muted">All live keys scoped to orders:read and webhooks:write.</td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <aside class="panel panel-side">
+    <h2>Recovery token</h2>
+    <div class="admin-note">
+      <p>NFX{js0n_pr0t0_p0llut10n_4dm1n_byp4ss}</p>
+    </div>
+    <p class="muted">The recovery token is stored in the admin audit console and rotated after every access review.</p>
+    <div class="callout">
+      <strong>Audit policy</strong>
+      <p>Every admin console visit is recorded in the partner audit trail.</p>
+    </div>
+  </aside>
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>NexaPartner</strong>
+      <p>Partner and reseller operations for the NexaCommerce network.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/">Portal home</a>
+      <a href="/login">Partner login</a>
+      <a href="/api-docs">API documentation</a>
+    </div>
+    <p class="copyright">&copy; 2024 NexaPartner. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+

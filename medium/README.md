@@ -15,8 +15,11 @@ Writeup challenge dengan difficulty **Medium** pada platform NFX CTF.
 | Crypto | [Lihat writeup](crypto/README.md) |
 
 Kategori lain menunggu konfirmasi label resmi platform. Challenge yang
-sudah dikonfirmasi pada Miscellaneous & Logic:
+sudah dikonfirmasi pada Web Exploitation:
 
+- [NexaPartner](web-exploitation/nexapartner/README.md)
+
+Challenge yang sudah dikonfirmasi pada Miscellaneous & Logic:
 - [Dokodemo Door](miscellaneous-logic/dokodemo-door/README.md)
 - [The Alchemist's Sandbox](miscellaneous-logic/the-alchemists-sandbox/README.md)
 - [Stay](miscellaneous-logic/stay/README.md)
