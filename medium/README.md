@@ -18,6 +18,7 @@ Kategori lain menunggu konfirmasi label resmi platform. Challenge yang
 sudah dikonfirmasi pada Web Exploitation:
 
 - [NexaPartner](web-exploitation/nexapartner/README.md)
+- [NexaIdentity](web-exploitation/nexaidentity/README.md)
 
 Challenge yang sudah dikonfirmasi pada Miscellaneous & Logic:
 - [Dokodemo Door](miscellaneous-logic/dokodemo-door/README.md)

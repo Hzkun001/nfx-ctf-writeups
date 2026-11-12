@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin console — NexaIdentity</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="announcement">NexaIdentity · Employee directory · Profile changes sync every 15 minutes</div>
+  <nav class="navbar">
+    <a class="brand" href="/">Nexa<span>Identity</span></a>
+    <div class="nav-links">
+      
+        <a href="/dashboard">Dashboard</a>
+        <a href="/directory">Directory</a>
+        <a href="/admin">Admin console</a>
+      
+    </div>
+    <div class="nav-actions">
+      
+        <span class="nav-user">Nadia Kusuma · People Operations</span>
+        <a class="btn btn-ghost" href="/logout">Sign out</a>
+      
+    </div>
+  </nav>
+
+  <main class="container">
+
+
+<section class="page-head">
+  <div>
+    <span class="eyebrow">People Operations</span>
+    <h1>Identity admin console</h1>
+    <p>Restricted directory controls and recovery records for the NexaCommerce workspace.</p>
+  </div>
+  <span class="pill pill-role">Administrator</span>
+</section>
+
+<section class="stats-row">
+  <article class="stat-card">
+    <span>Directory size</span>
+    <strong>12</strong>
+    <small>Active employees</small>
+  </article>
+  <article class="stat-card">
+    <span>Departments</span>
+    <strong>11</strong>
+    <small>Across the company</small>
+  </article>
+  <article class="stat-card">
+    <span>Access review</span>
+    <strong class="stat-text">Current</strong>
+    <small>Next review in 21 days</small>
+  </article>
+  <article class="stat-card">
+    <span>Admin owner</span>
+    <strong class="stat-text">Nadia Kusuma</strong>
+    <small>Head of People Operations</small>
+  </article>
+</section>
+
+<div class="detail-grid">
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Restricted recovery note</h2>
+      <span class="pill pill-danger">Sensitive</span>
+    </div>
+    <div class="admin-note">
+      <p>Emergency recovery token for the identity vault: NFX{n0sql_0p3r4t0r_4uth_byp4ss}</p>
+    </div>
+    <p class="muted">This note is visible only to administrators in the identity admin console. Rotate the recovery token after any access review.</p>
+  </section>
+
+  <aside class="panel panel-side">
+    <h2>Admin actions</h2>
+    <ul class="check-list">
+      <li>Review directory access grants</li>
+      <li>Rotate the identity recovery token</li>
+      <li>Export the quarterly access report</li>
+    </ul>
+    <div class="callout">
+      <strong>Audit trail</strong>
+      <p>Every admin console visit is written to the workspace audit log.</p>
+    </div>
+  </aside>
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>NexaIdentity</strong>
+      <p>The employee directory and workspace identity portal for NexaCommerce.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/">Directory home</a>
+      <a href="/login">Employee login</a>
+      <a href="/directory">People search</a>
+    </div>
+    <p class="copyright">&copy; 2024 NexaIdentity. Internal use only.</p>
+  </footer>
+</body>
+</html>
+
