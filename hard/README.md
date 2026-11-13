@@ -21,5 +21,6 @@ sudah dikonfirmasi:
 - [FlagKeepers](crypto/flagkeepers/README.md) (Crypto)
 - [TheForgottenState](binary-exploit-pwn/theforgottenstate/README.md) (Binary Exploit (Pwn))
 - [Bluebird Session](forensics/bluebird-session/README.md) (Forensics)
+- [Castaway](reverse-engineering/castaway/README.md) (Reverse Engineering)
 
 Simpan setiap writeup di `hard/kategori/nama-challenge/README.md`.
