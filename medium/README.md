@@ -13,6 +13,7 @@ Writeup challenge dengan difficulty **Medium** pada platform NFX CTF.
 | Miscellaneous & Logic | [Lihat writeup](miscellaneous-logic/README.md) |
 | Forensics | [Lihat writeup](forensics/README.md) |
 | Crypto | [Lihat writeup](crypto/README.md) |
+| OSINT | [Lihat writeup](osint/README.md) |
 
 Kategori lain menunggu konfirmasi label resmi platform. Challenge yang
 sudah dikonfirmasi pada Web Exploitation:
@@ -55,5 +56,9 @@ Challenge yang sudah dikonfirmasi pada Reverse Engineering:
 
 - [Medium RC4](reverse-engineering/medium-rc4/README.md)
 - [Medium TEA](reverse-engineering/medium-tea/README.md)
+
+Challenge yang sudah dikonfirmasi pada OSINT:
+
+- [The Ghost Operator](osint/the-ghost-operator/README.md)
 
 Simpan setiap writeup di `medium/kategori/nama-challenge/README.md`.

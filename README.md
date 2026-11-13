@@ -27,7 +27,7 @@ gambar di bagian ini setelah berkasnya tersedia.
 
 | Difficulty | Indeks | Status |
 | --- | --- | --- |
-| Medium | [Lihat daftar](medium/README.md) | 21 writeup: NexaPartner, NexaIdentity, Dokodemo Door, The Alchemist's Sandbox, Stay, Wujud Aseli Atmin, SymHell, Art Evidence Secret, Pipa Nu Kotor, NFXCTF Convention, Forgotten Commit, Black Box Protocol N4T0, ECDSA Nonce Bias, Unbreakable Delay, Feistel Differential, Cihuy LWE, Static IV Offline, RSA Coppersmith Cihuy, Medium RC4, Medium TEA, Weak Handshake |
+| Medium | [Lihat daftar](medium/README.md) | 22 writeup: NexaPartner, NexaIdentity, Dokodemo Door, The Alchemist's Sandbox, Stay, Wujud Aseli Atmin, SymHell, Art Evidence Secret, Pipa Nu Kotor, NFXCTF Convention, Forgotten Commit, Black Box Protocol N4T0, ECDSA Nonce Bias, Unbreakable Delay, Feistel Differential, Cihuy LWE, Static IV Offline, RSA Coppersmith Cihuy, Medium RC4, Medium TEA, Weak Handshake, The Ghost Operator |
 | Hard | [Lihat daftar](hard/README.md) | 9 writeup: My Lovely Freya, Broken Signature Scheme, FlagKeepers, TheForgottenState, Bluebird Session, Castaway, Hard VM Bytecode, Hard Feistel, Tragedi 9/11 |
 | Insane | [Lihat daftar](insane/README.md) | 1 writeup: NarrowGate |
 
@@ -48,7 +48,8 @@ diterima platform. Prefiks dan kapitalisasi flag dipertahankan sesuai hasil.
 │   ├── boot-to-root/
 │   ├── miscellaneous-logic/
 │   ├── forensics/
-│   └── crypto/
+│   ├── crypto/
+│   └── osint/
 ├── hard/
 │   ├── README.md
 │   └── osint/

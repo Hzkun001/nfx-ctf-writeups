@@ -1,0 +1,21 @@
+commit d2627a7e85c19332bf5d36081ac2e05577a2cdba (HEAD -> main)
+gpg: Signature made Mon Oct 26 02:49:05 2026 WITA
+gpg:                using RSA key B17171D40DE252F193E79707E6BE71CA2BD84A4E
+gpg: Good signature from "Dimas Wirawan (rentry.co/ghost-route-0914) <ghost.operator.rentry@veloxphantom.net>" [unknown]
+Primary key fingerprint: B171 71D4 0DE2 52F1 93E7  9707 E6BE 71CA 2BD8 4A4E
+Author: Dimas Wirawan <dimas.wirawan@netmetrics-net.example>
+Date:   Mon Oct 26 01:48:52 2026 +0700
+
+    audit: final system integrity verification before handoff
+
+diff --git a/IR_MEMO.md b/IR_MEMO.md
+new file mode 100644
+index 0000000..7427cd4
+--- /dev/null
++++ b/IR_MEMO.md
+@@ -0,0 +1,5 @@
++# Incident Response Audit Memo - NetMetrics Internal
++Auditor: SecOps
++Operator: Dimas Wirawan
++Status: RESIGNED
++Audit signed with official GPG key.

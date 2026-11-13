@@ -1,0 +1,17 @@
+[BURST TRANSMISSION - 0914] 
+Operator: Dimas W. (Ghost Operator)
+Status: CODE ORANGE - OPERATIONAL EVACUATION  
+
+Evacuation Log & Route Clues 
+NetMetrics IR team sudah mulai sniffing outbound TLS connections ke Velox gateway.
+Laptop dan hard drive kantor sudah diserahkan tanpa jejak fisik (firmware sanitized).
+Rute Pelarian Menuju Safehouse:
+
+Keluar dari Jakarta via Tol Cipularang menuju arah Bandung Barat.
+Exit Pasteur, potong rute via Jl. Sersan Bajuri ke arah utara (Parongpong - Lembang) untuk menghindari pemantauan kamera ETLE di jalur arteri utama.
+Lokasi safehouse: Komplek villa pegunungan di kaki Gunung Burangrang, sepanjang Jl. Kolonel Masturi KM 9, Parongpong, kawasan Lembang.
+Area pegunungan dingin berkabut dengan arsitektur villa berhiaskan taman bunga tematik. Sinyal seluler teredam lembah, aman dari pelacakan BTS.
+Komplek villa ini dikenal sebagai salah satu penginapan/komplek villa terbesar di Parongpong-Lembang.
+
+Menunggu instruksi lanjutan via dead-drop GPG radio.
+// Velox Ghost Operator
