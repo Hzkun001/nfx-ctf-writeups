@@ -4,7 +4,8 @@
 
 Analisis program dan rekonstruksi algoritma atau perilakunya.
 
-Belum ada writeup yang ditempatkan dalam kategori ini.
+## Daftar writeup
 
-Gunakan satu folder per challenge, kemudian tambahkan tautannya di sini.
-Setiap entri memuat nama challenge, tautan writeup, dan status verifikasi.
+- [Medium RC4](medium-rc4/README.md) — verifikasi lokal (binary menerima flag)
+
+Gunakan satu folder per challenge. Setiap entri memuat nama challenge, tautan writeup, dan status verifikasi.

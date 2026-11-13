@@ -48,4 +48,8 @@ Challenge yang sudah dikonfirmasi pada Crypto:
 - [Feistel Differential](crypto/feistel-differential/README.md)
 - [Cihuy LWE](crypto/cihuy-lwe/README.md)
 
+Challenge yang sudah dikonfirmasi pada Reverse Engineering:
+
+- [Medium RC4](reverse-engineering/medium-rc4/README.md)
+
 Simpan setiap writeup di `medium/kategori/nama-challenge/README.md`.
