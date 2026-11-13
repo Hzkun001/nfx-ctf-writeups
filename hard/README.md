@@ -23,5 +23,6 @@ sudah dikonfirmasi:
 - [Bluebird Session](forensics/bluebird-session/README.md) (Forensics)
 - [Castaway](reverse-engineering/castaway/README.md) (Reverse Engineering)
 - [Hard VM Bytecode](reverse-engineering/vm-bytecode/README.md) (Reverse Engineering)
+- [Hard Feistel](reverse-engineering/feistel/README.md) (Reverse Engineering)
 
 Simpan setiap writeup di `hard/kategori/nama-challenge/README.md`.
