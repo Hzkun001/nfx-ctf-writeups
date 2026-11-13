@@ -60,5 +60,6 @@ Challenge yang sudah dikonfirmasi pada Reverse Engineering:
 Challenge yang sudah dikonfirmasi pada OSINT:
 
 - [The Ghost Operator](osint/the-ghost-operator/README.md)
+- [Fresh Arrival](osint/fresh-arrival/README.md)
 
 Simpan setiap writeup di `medium/kategori/nama-challenge/README.md`.
