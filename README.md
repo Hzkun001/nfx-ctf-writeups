@@ -8,9 +8,9 @@ Repositori ini memuat **33 writeup teknis** yang mencakup kategori **Medium, Har
 ## Profil Peserta & Scoreboard
 
 > [!IMPORTANT]
-> **Catatan Pergerakan Scoreboard (Per 13 November 2026, ~22:15 WIB):**  
-> Akun **`hz-was-here`** sebelumnya sempat menempati peringkat **#5**. Menjelang batas akhir pengumpulan kompetisi pada malam deadline (terekam sekitar pukul 22:00+ WIB, sebelum penutupan resmi pukul 23:59 WIB), terjadi dinamika submit menit-menit akhir oleh peserta lain sehingga posisi bergeser ke **Peringkat #7** dengan total perolehan **5.445 poin**.  
-> Snapshot berikut merekam posisi resmi saat dokumentasi ini diselesaikan.
+> **Catatan Posisi Scoreboard & Identitas Peserta:**  
+> * **Identitas & Track:** Akun terdaftar pada platform kompetisi hanya menggunakan username **`hz-was-here`** (tidak terdapat isian nama lengkap pada sistem platform) dan berkompetisi di **Track Umum**.  
+> * **Posisi Scoreboard:** Saat acara/kompetisi selesai, posisi akun seharusnya berada di **Peringkat #5**. Pada tampilan antarmuka live dashboard saat tangkapan layar diambil (sekitar pukul 22:15 WIB, 13 November 2026), sistem mencatat posisi di **Peringkat #7** (5.445 poin). Bukti tangkapan layar dashboard tetap dilampirkan apa adanya untuk transparansi penilaian oleh panitia.
 
 <p align="center">
   <img src="assets/scoreboard/scoreboard-final.png" alt="Posisi Scoreboard Akhir NFX CTF" width="950"/>
@@ -18,11 +18,12 @@ Repositori ini memuat **33 writeup teknis** yang mencakup kategori **Medium, Har
 
 | Parameter | Keterangan |
 | --- | --- |
-| **Username CTF** | `hz-was-here` |
+| **Username CTF** | `hz-was-here` *(hanya username, tanpa field nama pada sistem platform)* |
+| **Track** | **Track Umum** |
 | **GitHub** | [Hzkun001](https://github.com/Hzkun001) |
 | **Platform** | NFX CTF (`ctf.nfx.my.id`) |
-| **Posisi Akhir** | **#7** (Top 10) |
-| **Total Skor** | **5.445 poin** |
+| **Posisi Saat Selesai Acara** | **Peringkat #5** |
+| **Posisi Tercatat di Snapshot** | **Peringkat #7** (5.445 poin) |
 | **Total Solve Terdokumentasi** | **33 Challenge** (23 Medium, 9 Hard, 1 Insane) |
 | **Bukti Arsip** | [assets/scoreboard/README.md](assets/scoreboard/README.md) |
 
