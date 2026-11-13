@@ -51,5 +51,6 @@ Challenge yang sudah dikonfirmasi pada Crypto:
 Challenge yang sudah dikonfirmasi pada Reverse Engineering:
 
 - [Medium RC4](reverse-engineering/medium-rc4/README.md)
+- [Medium TEA](reverse-engineering/medium-tea/README.md)
 
 Simpan setiap writeup di `medium/kategori/nama-challenge/README.md`.
