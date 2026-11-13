@@ -1,0 +1,6 @@
+{
+  "ct_hex": "7739b21e85a44c8fabc82ed42b5b4f872d94b59578da88e4ec9a258224118b493ab06f1054a0fe6172840762fe21441ada0f0260513b3858dc2ab4dfac6fb61c41df848bf5bbdabe8910b155dd487c33",
+  "iv_hex": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "counter": 11,
+  "note": "IV statis, key = SHA256(MASTER || counter). MASTER ada di challenge.py."
+}

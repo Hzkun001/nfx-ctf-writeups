@@ -48,6 +48,8 @@ Challenge yang sudah dikonfirmasi pada Crypto:
 - [Unbreakable Delay](crypto/unbreakable-delay/README.md)
 - [Feistel Differential](crypto/feistel-differential/README.md)
 - [Cihuy LWE](crypto/cihuy-lwe/README.md)
+- [Static IV Offline](crypto/static-iv-offline/README.md)
+- [RSA Coppersmith Cihuy](crypto/rsa-coppersmith-cihuy/README.md)
 
 Challenge yang sudah dikonfirmasi pada Reverse Engineering:
 
