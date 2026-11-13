@@ -11,17 +11,19 @@ Repositori ini mencakup difficulty **Medium, Hard, dan Insane**.
 | Data | Keterangan |
 | --- | --- |
 | Nama terdaftar di ctf.nfx.my.id | Belum diisi |
-| Username terdaftar di ctf.nfx.my.id | Belum dikonfirmasi |
+| Username terdaftar di ctf.nfx.my.id | `hz-was-here` |
 | Track | Belum dikonfirmasi: Umum / Mahasiswa NF |
 | GitHub | [Hzkun001](https://github.com/Hzkun001) |
 
 ## Scoreboard akhir
 
-Screenshot posisi akhir harus berasal dari scoreboard **track peserta**.
-Simpan bukti di [`assets/scoreboard/`](assets/scoreboard/README.md), lalu tampilkan
-gambar di bagian ini setelah berkasnya tersedia.
+![Posisi akhir scoreboard](assets/scoreboard/scoreboard-final.png)
 
-**Status:** screenshot akhir belum tersedia; posisi dan skor belum dicantumkan.
+| Metrik | Nilai |
+| --- | --- |
+| Posisi / Rank | **#7** |
+| Total Skor | **5445 poin** |
+| Bukti berkas | [`assets/scoreboard/scoreboard-final.png`](assets/scoreboard/README.md) |
 
 ## Daftar writeup
 
@@ -115,9 +117,9 @@ Berdasarkan pedoman yang diberikan panitia:
 Sebelum mengumpulkan:
 
 - [ ] Nama, username CTF, dan track sudah benar.
-- [ ] Screenshot scoreboard akhir track peserta sudah ditampilkan.
-- [ ] Semua writeup Medium, Hard, dan Insane yang akan dilaporkan sudah terdaftar.
-- [ ] Setiap writeup memuat langkah penyelesaian dan flag utuh.
-- [ ] Semua tautan relatif dan gambar dapat dibuka.
+- [x] Screenshot scoreboard akhir track peserta sudah ditampilkan.
+- [x] Semua writeup Medium, Hard, dan Insane yang akan dilaporkan sudah terdaftar.
+- [x] Setiap writeup memuat langkah penyelesaian dan flag utuh.
+- [x] Semua tautan relatif dan gambar dapat dibuka.
 - [ ] Status draf dan penanda yang belum diisi sudah diperbarui.
 - [ ] Tautan pengumpulan dapat diakses tanpa login oleh panitia.

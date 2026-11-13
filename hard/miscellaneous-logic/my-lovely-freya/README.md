@@ -53,7 +53,9 @@ Ubah field tinggi `IHDR` pada offset `0x14` menjadi `1536` (`00 00 06 00`),
 lalu hitung ulang CRC `IHDR` pada offset `0x1D`. CRC mencakup jenis chunk
 `IHDR` dan payload-nya. Payload `IDAT` dipertahankan utuh.
 
-Bagian bawah [gambar yang dipulihkan](assets/freya-restored.png) menampilkan:
+![Gambar Freya setelah tinggi scanline dipulihkan](assets/freya-restored.png)
+
+Bagian bawah gambar yang dipulihkan menampilkan:
 
 ```text
 <!HayamGoreng45@/>

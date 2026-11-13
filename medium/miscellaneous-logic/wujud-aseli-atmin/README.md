@@ -31,6 +31,8 @@ Berkas input adalah PNG dengan metadata ukuran:
 | --- | --- | --- |
 | `dokumentasi.png` | 1.328.704 byte | `ab61ce519d0776ecae6695649c1a98d741b9cc2ded82e11a508305ae7385a3d9` |
 
+![Berkas lampiran dokumentasi.png](assets/dokumentasi.png)
+
 Pemeriksaan akhir chunk PNG menemukan bahwa marker `IEND` (`49 45 4E 44 AE 42 60 82`)
 diikuti oleh signature arsip ZIP (`PK\x03\x04` pada offset `0x1434ce`):
 

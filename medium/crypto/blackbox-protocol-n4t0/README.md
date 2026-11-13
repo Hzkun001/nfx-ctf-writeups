@@ -30,6 +30,8 @@ menjalankan berkas yang tidak dipercaya.
 Berkas input: **5.823 byte**, SHA256
 `afeb670e8f99e98968d8d1d14db12f267ac2b639ae47ce4602992bfe76518b3b`.
 
+![Flight Recovery Manifest Spreadsheet](assets/manifest_spreadsheet.png)
+
 ### 2. Kolom A — ejaan NATO dan angka
 
 `A2:A16` (15 sel) berisi kata seperti `November`, `Four`, `Tango`, `Zero`,

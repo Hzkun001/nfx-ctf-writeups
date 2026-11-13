@@ -131,6 +131,8 @@ Plaintext server diawali header HTTP lalu body JPEG 323692 byte. Flag tertulis
 sebagai **teks overlay semi-transparan** dua baris di bagian bawah gambar,
 memakai warna flat `rgb(233, 219, 219)`:
 
+![Hasil dekripsi ending.jpg dengan overlay flag](assets/ending.jpg)
+
 ```
 {D36A64128F80788B
 60C677EF94FA7157}

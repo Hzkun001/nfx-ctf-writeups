@@ -31,6 +31,8 @@ Berkas input adalah PNG RGB **1495 × 2424**, **774.601 byte**, SHA256
 Seluruh CRC chunk valid dan tidak ada data tambahan setelah `IEND`, jadi
 flag tidak bisa diambil dengan `strings` atau `binwalk` biasa.
 
+![Gambar asli soal art-evidence-secret](assets/original.png)
+
 Metadata yang relevan:
 
 | Kunci | Nilai mentah |
