@@ -13,6 +13,7 @@ Writeup challenge dengan difficulty **Hard** pada platform NFX CTF.
 | Miscellaneous & Logic | [Lihat writeup](miscellaneous-logic/README.md) |
 | Forensics | [Lihat writeup](forensics/README.md) |
 | Crypto | [Lihat writeup](crypto/README.md) |
+| OSINT | [Lihat writeup](osint/README.md) |
 
 Kategori lain menunggu konfirmasi label resmi platform. Challenge yang
 sudah dikonfirmasi:
@@ -24,5 +25,6 @@ sudah dikonfirmasi:
 - [Castaway](reverse-engineering/castaway/README.md) (Reverse Engineering)
 - [Hard VM Bytecode](reverse-engineering/vm-bytecode/README.md) (Reverse Engineering)
 - [Hard Feistel](reverse-engineering/feistel/README.md) (Reverse Engineering)
+- [Tragedi 9/11](osint/tragedi-9-11/README.md) (OSINT)
 
 Simpan setiap writeup di `hard/kategori/nama-challenge/README.md`.

@@ -1,0 +1,21 @@
+# Tragedi 9/11
+Author: salep88
+
+Jangan percaya bahwa semua yang berharga dapat ditemukan dengan melihat lebih dekat.
+
+Sebuah rekaman dari salah satu peristiwa paling kelam yang pernah terjadi di sebuah negara adidaya kembali beredar di internet. Di tengah kepulan asap dan kepanikan, seorang pria terlihat membantu seorang ibu yang nyaris terjebak dalam asap. 
+
+Seorang pemilik toko kemudian meminta wanita tersebut masuk ke dalam tokonya untuk menyelamatkan diri.
+Rekaman itu dibagikan oleh seseorang di sebuah forum yang mungkin tidak asing bagi para pencari informasi.
+Jika kau menemukan videonya, jangan berhenti di sana.
+Perhatikan orang yang membagikannya.
+
+Gunakan nama tersebut untuk mencari jejak lain yang ditinggalkannya di dunia para pembuat perangkat lunak.
+
+Kau mungkin menemukan sebuah tempat yang tampaknya tidak menyimpan apa-apa.
+Tapi jangan hanya melihat apa yang ada sekarang.
+
+Format Flag: NFX{your_flag_here}
+
+Lampiran:
+tragedi_9_11.mp4 (Google Drive: https://drive.google.com/file/d/19FFeyJ01U0W7Ug35V1AfrYrv21VleU3e/view?usp=sharing)

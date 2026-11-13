@@ -1,0 +1,38 @@
+From df34505b8a8ce9a97bac2bf57fec359097a0d815 Mon Sep 17 00:00:00 2001
+From: PigParkerPt2 <whoiami7869@gmail.com>
+Date: Sun, 1 Nov 2026 22:44:47 +0700
+Subject: [PATCH] add .env
+
+---
+ .env         | 5 +++++
+ .env.example | 4 ++++
+ 2 files changed, 9 insertions(+)
+ create mode 100644 .env
+ create mode 100644 .env.example
+
+diff --git a/.env b/.env
+new file mode 100644
+index 0000000..47a559b
+--- /dev/null
++++ b/.env
+@@ -0,0 +1,5 @@
++SERVER_HOST=localhost
++SERVER_PORT=3002
++
++
++NFX{OS1NT_DU4R_D34_D0R}
+\ No newline at end of file
+diff --git a/.env.example b/.env.example
+new file mode 100644
+index 0000000..32d854a
+--- /dev/null
++++ b/.env.example
+@@ -0,0 +1,4 @@
++SERVER_HOST=
++SERVER_PORT=
++
++NFX{OS1NT_DU4R_D34_D0R}
+\ No newline at end of file
+-- 
+2.56.0
+
