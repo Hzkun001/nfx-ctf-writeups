@@ -1,28 +1,41 @@
 #!/usr/bin/env python3
-"""Solver untuk challenge Medium RC4 (NFX CTF).
+"""Solver untuk challenge Medium RC4 (Medium Reverse Engineering).
 
-Binary validator memakai RC4 dengan kunci 128-bit yang tertanam di .rodata.
-Karena RC4 simetris, dekripsi memakai fungsi yang sama dengan enkripsi.
+Binary validator memakai RC4 dengan kunci yang tertanam di .rodata. Karena RC4
+simetris, dekripsi memakai fungsi yang sama dengan enkripsi.
 
 Pemakaian:
     python3 solve.py [path-ke-binary]
 
-Default path: medium_rc4 di direktori yang sama dengan skrip ini.
+Default input: assets/medium_rc4 di direktori yang sama dengan skrip ini.
 """
+
+import hashlib
 import sys
 from pathlib import Path
 
-DEFAULT_BIN = Path(__file__).with_name("medium_rc4")
+ROOT = Path(__file__).resolve().parent
+ASSETS = ROOT / "assets"
+TARGET_FILE = ASSETS / "medium_rc4"
+EXPECTED_SHA256 = "cc8b962d1501755603febfb884c5c49b42d9814aff165ed21d9cc81cda71d0f1"
 
-# Lokasi di .rodata (file offset == virtual address karena .rodata dipetakan 1:1
-# pada offset yang sama di segmen ini).
-RODATA_OFF = 0x2000
+# Offset di .rodata (berkas dipetakan 1:1 pada segmen ini).
 KEY_ADDR = 0x2021          # "n0t_s3cur3_k3y_2026"
+KEY_LEN = 19
 CT_ADDR = 0x2060           # 42-byte ciphertext
 CT_LEN = 0x2A              # 42
 
 
+def check_input(path: Path = TARGET_FILE) -> None:
+    got = hashlib.sha256(path.read_bytes()).hexdigest()
+    if got != EXPECTED_SHA256:
+        raise ValueError(
+            f"Hash input tidak sesuai untuk {path.name}: {got} != {EXPECTED_SHA256}"
+        )
+
+
 def rc4(key: bytes, data: bytes) -> bytes:
+    """RC4 standar: KSA lalu PRGA."""
     S = list(range(256))
     j = 0
     for i in range(256):
@@ -30,26 +43,25 @@ def rc4(key: bytes, data: bytes) -> bytes:
         S[i], S[j] = S[j], S[i]
     i = j = 0
     out = bytearray()
-    for b in data:
+    for byte in data:
         i = (i + 1) & 0xFF
         j = (j + S[i]) & 0xFF
         S[i], S[j] = S[j], S[i]
-        out.append(b ^ S[(S[i] + S[j]) & 0xFF])
+        out.append(byte ^ S[(S[i] + S[j]) & 0xFF])
     return bytes(out)
 
 
-def solve(bin_path: Path) -> str:
-    data = bin_path.read_bytes()
-    key = data[KEY_ADDR:KEY_ADDR + 19]
+def solve(path: Path = TARGET_FILE) -> str:
+    check_input(path)
+    data = path.read_bytes()
+    key = data[KEY_ADDR:KEY_ADDR + KEY_LEN]
     ct = data[CT_ADDR:CT_ADDR + CT_LEN]
-    pt = rc4(key, ct)
-    return pt.decode("ascii")
+    return rc4(key, ct).decode("ascii")
 
 
 def main() -> int:
-    bin_path = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_BIN
-    flag = solve(bin_path)
-    print(flag)
+    path = Path(sys.argv[1]) if len(sys.argv) > 1 else TARGET_FILE
+    print(solve(path))
     return 0
 
 
