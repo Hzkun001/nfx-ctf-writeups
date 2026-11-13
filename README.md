@@ -8,9 +8,8 @@ Repositori ini memuat **33 writeup teknis** yang mencakup kategori **Medium, Har
 ## Profil Peserta & Scoreboard
 
 > [!IMPORTANT]
-> **Catatan Posisi Scoreboard & Identitas Peserta:**  
-> * **Identitas & Track:** Akun terdaftar pada platform kompetisi hanya menggunakan username **`hz-was-here`** (tidak terdapat isian nama lengkap pada sistem platform) dan berkompetisi di **Track Umum**.  
-> * **Posisi Scoreboard:** Saat acara/kompetisi selesai, posisi akun seharusnya berada di **Peringkat #5**. Pada tampilan antarmuka live dashboard saat tangkapan layar diambil (sekitar pukul 22:15 WIB, 13 November 2026), sistem mencatat posisi di **Peringkat #7** (5.445 poin). Bukti tangkapan layar dashboard tetap dilampirkan apa adanya untuk transparansi penilaian oleh panitia.
+> **Catatan Posisi Scoreboard:**  
+> Saat acara/kompetisi selesai, posisi akun seharusnya berada di **Peringkat #5**. Pada tampilan antarmuka live dashboard saat tangkapan layar diambil (sekitar pukul 22:15 WIB, 13 November 2026), sistem mencatat posisi di **Peringkat #7** (5.445 poin). Bukti tangkapan layar dashboard tetap dilampirkan apa adanya untuk transparansi penilaian oleh panitia.
 
 <p align="center">
   <img src="assets/scoreboard/scoreboard-final.png" alt="Posisi Scoreboard Akhir NFX CTF" width="950"/>
@@ -18,7 +17,7 @@ Repositori ini memuat **33 writeup teknis** yang mencakup kategori **Medium, Har
 
 | Parameter | Keterangan |
 | --- | --- |
-| **Username CTF** | `hz-was-here` *(hanya username, tanpa field nama pada sistem platform)* |
+| **Username CTF** | `hz-was-here` |
 | **Track** | **Track Umum** |
 | **GitHub** | [Hzkun001](https://github.com/Hzkun001) |
 | **Platform** | NFX CTF (`ctf.nfx.my.id`) |
