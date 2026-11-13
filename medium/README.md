@@ -30,6 +30,7 @@ Challenge yang sudah dikonfirmasi pada Miscellaneous & Logic:
 Challenge yang sudah dikonfirmasi pada Forensics:
 
 - [Art Evidence Secret](forensics/art-evidence-secret/README.md)
+- [Weak Handshake](forensics/weak-handshake/README.md)
 
 Challenge yang sudah dikonfirmasi pada Binary Exploit (Pwn):
 
