@@ -46,5 +46,6 @@ Challenge yang sudah dikonfirmasi pada Crypto:
 - [ECDSA Nonce Bias](crypto/ecdsa-nonce-bias/README.md)
 - [Unbreakable Delay](crypto/unbreakable-delay/README.md)
 - [Feistel Differential](crypto/feistel-differential/README.md)
+- [Cihuy LWE](crypto/cihuy-lwe/README.md)
 
 Simpan setiap writeup di `medium/kategori/nama-challenge/README.md`.
