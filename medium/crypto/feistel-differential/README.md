@@ -126,6 +126,14 @@ Jalankan pengujian unit:
 python3 test_solve.py
 ```
 
+## Bukti
+
+- [assets/cipher.py](assets/cipher.py): implementasi enkripsi cipher Feistel 7-round.
+- [assets/pairs.txt](assets/pairs.txt): pasangan plaintext-ciphertext dengan selisih input tertentu.
+- [assets/flag.enc](assets/flag.enc): berkas keluaran flag terenkripsi.
+- [solve.py](solve.py): skrip analisis diferensial, penghitungan DDT, dan rekonstruksi subkunci.
+- [test_solve.py](test_solve.py): pengujian unit untuk verifikasi subkunci dan validasi flag.
+
 ## Penggunaan AI
 
 Analisis DDT, propagasi *trail*, dan formulasi *round peeling* dikembangkan

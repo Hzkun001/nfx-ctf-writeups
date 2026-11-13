@@ -159,6 +159,13 @@ Jalankan pengujian unit:
 python3 test_solve.py
 ```
 
+## Bukti
+
+- [assets/shadow_repo.tar.gz](assets/shadow_repo.tar.gz): arsip repositori Git target (`shadow_repo`).
+- [assets/21d5a194fb6a627b1702cbf74b51589789988b72.blob](assets/21d5a194fb6a627b1702cbf74b51589789988b72.blob): dangling blob hasil ekstraksi `git fsck`.
+- [solve.py](solve.py): skrip otomatisasi inspeksi Git dan dekripsi XOR keystream.
+- [test_solve.py](test_solve.py): unit test derivasi kunci dan verifikasi flag.
+
 ## Penggunaan AI
 
 Analisis dangling blob pada struktur internal Git dan verifikasi keystream

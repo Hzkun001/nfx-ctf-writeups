@@ -130,3 +130,7 @@ python3 -m unittest -v
 - [assets/app.py](assets/app.py): kode sumber layanan FlagKeepers.
 - [solve.py](solve.py): implementasi penuh aritmetika medan $\text{GF}(2^{128})$, GCD polinomial, dan eksploitasi socket.
 - [test_solve.py](test_solve.py): unit test pembuktian sifat invers medan dan ketepatan faktorisasi GCD.
+
+## Penggunaan AI
+
+Formulasi aritmetika polinomial $\text{GF}(2^{128})$ dan eliminasi tag autentikasi AES-GCM (Forbidden Attack) dibantu oleh AI untuk mengoptimalkan pencarian akar persekutuan terbesar (GCD).

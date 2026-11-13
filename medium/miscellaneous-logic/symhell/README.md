@@ -128,4 +128,8 @@ python3 -m unittest -v
 
 - [assets/app.py](assets/app.py): kode sumber layanan tantangan.
 - [solve.py](solve.py): generator payload dan client komunikasi socket.
-- [test_solve.py](test_solve.py): verifikasi kepatuhan filter dan struktur flag.
+- [test_solve.py](test_solve.py): unit test validasi filter regex dan rekonstruksi payload.
+
+## Penggunaan AI
+
+Perancangan payload restriksi Bash tanpa alfanumerik dan bypass glob bracket dibantu oleh AI.

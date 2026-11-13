@@ -77,6 +77,8 @@ medium/web-exploitation/nama-challenge/
 | Reverse Engineering | `reverse-engineering/` |
 | Boot to Root | `boot-to-root/` |
 | Miscellaneous & Logic | `miscellaneous-logic/` |
+| Forensics | `forensics/` |
+| Cryptography | `crypto/` |
 
 Daftar kategori masih menunggu pelengkapan menjadi delapan kategori sesuai
 label resmi platform. Nama yang belum dikonfirmasi belum dibuatkan folder.

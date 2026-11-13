@@ -118,3 +118,7 @@ python3 -m unittest -v
 - [assets/sample_parameters.json](assets/sample_parameters.json): rekaman parameter numerik sesi kompetisi.
 - [solve.py](solve.py): implementasi branch-and-bound factoring dan kalkulasi bukti VDF.
 - [test_solve.py](test_solve.py): unit test aljabar dan verifikasi struktur VDF.
+
+## Penggunaan AI
+
+Analisis pereduksian relasi $p \oplus q$ menjadi pencarian branch-and-bound serta bypass pembuktian interaktif VDF Pietrzak dibantu oleh AI.

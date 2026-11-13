@@ -113,3 +113,7 @@ python3 -m unittest -v
 - [assets/dokumentasi.png](assets/dokumentasi.png): berkas input tantangan.
 - [solve.py](solve.py): skrip otomatisasi ekstraksi dan dekode.
 - [test_solve.py](test_solve.py): unit test pemastian integritas berkas dan flag.
+
+## Penggunaan AI
+
+Analisis perbaikan chunk PNG yang rusak serta identifikasi steganografi LSB pada kanal warna merah dibantu oleh AI.
