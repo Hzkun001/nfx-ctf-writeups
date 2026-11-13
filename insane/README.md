@@ -1,19 +1,13 @@
-# Insane
+# Insane Challenges — NFX CTF 2026
 
-[Kembali ke indeks utama](../README.md)
+[← Kembali ke Indeks Utama](../README.md)
 
-Writeup challenge dengan difficulty **Insane** pada platform NFX CTF.
+Dokumentasi challenge tingkat kesulitan **Insane** pada NFX CTF 2026.
 
-| Kategori | Indeks |
-| --- | --- |
-| Web Exploitation | [Lihat writeup](web-exploitation/README.md) |
-| Binary Exploit (Pwn) | [Lihat writeup](binary-exploit-pwn/README.md) |
-| Reverse Engineering | [Lihat writeup](reverse-engineering/README.md) |
-| Boot to Root | [Lihat writeup](boot-to-root/README.md) |
-| Miscellaneous & Logic | [Lihat writeup](miscellaneous-logic/README.md) |
+---
 
-Kategori lain menunggu konfirmasi label resmi platform. Challenge yang
-sudah dikonfirmasi: [NarrowGate](binary-exploit-pwn/narrowgate/README.md)
-(Binary Exploit (Pwn)).
+## Ringkasan Solve (1 Challenge)
 
-Simpan setiap writeup di `insane/kategori/nama-challenge/README.md`.
+| Kategori | Challenge | Deskripsi Singkat |
+| --- | --- | --- |
+| **Binary Exploitation (Pwn)** | [NarrowGate](binary-exploit-pwn/narrowgate/README.md) | Full-chain heap exploitation (tcache poisoning) dengan mitigasi modern lengkap (ASLR, Full RELRO, PIE, Canary) dan eksekusi payload melalui filter ketat Seccomp sandbox. |

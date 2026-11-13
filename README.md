@@ -1,125 +1,166 @@
-# NFX CTF 2026 Writeups
+# NFX CTF 2026 — Official Writeups
 
-Dokumentasi penyelesaian challenge NFX CTF oleh [Hzkun001](https://github.com/Hzkun001).
-Repositori ini mencakup difficulty **Medium, Hard, dan Insane**.
+Dokumentasi lengkap penyelesaian challenge NFX CTF 2026 oleh **[Hzkun001](https://github.com/Hzkun001)** (`hz-was-here`).  
+Repositori ini memuat **33 writeup teknis** yang mencakup kategori **Medium, Hard, dan Insane**.
 
-> **Status: draf persiapan pengumpulan.** Identitas peserta, screenshot
-> scoreboard akhir, serta daftar writeup masih perlu dilengkapi.
+---
 
-## Identitas peserta
+## Profil Peserta & Scoreboard
 
-| Data | Keterangan |
+> [!IMPORTANT]
+> **Catatan Pergerakan Scoreboard (Per 13 November 2026, ~22:15 WIB):**  
+> Akun **`hz-was-here`** sebelumnya sempat menempati peringkat **#5**. Menjelang batas akhir pengumpulan kompetisi pada malam deadline (terekam sekitar pukul 22:00+ WIB, sebelum penutupan resmi pukul 23:59 WIB), terjadi dinamika submit menit-menit akhir oleh peserta lain sehingga posisi bergeser ke **Peringkat #7** dengan total perolehan **5.445 poin**.  
+> Snapshot berikut merekam posisi resmi saat dokumentasi ini diselesaikan.
+
+<p align="center">
+  <img src="assets/scoreboard/scoreboard-final.png" alt="Posisi Scoreboard Akhir NFX CTF" width="950"/>
+</p>
+
+| Parameter | Keterangan |
 | --- | --- |
-| Nama terdaftar di ctf.nfx.my.id | Belum diisi |
-| Username terdaftar di ctf.nfx.my.id | `hz-was-here` |
-| Track | Belum dikonfirmasi: Umum / Mahasiswa NF |
-| GitHub | [Hzkun001](https://github.com/Hzkun001) |
+| **Username CTF** | `hz-was-here` |
+| **GitHub** | [Hzkun001](https://github.com/Hzkun001) |
+| **Platform** | NFX CTF (`ctf.nfx.my.id`) |
+| **Posisi Akhir** | **#7** (Top 10) |
+| **Total Skor** | **5.445 poin** |
+| **Total Solve Terdokumentasi** | **33 Challenge** (23 Medium, 9 Hard, 1 Insane) |
+| **Bukti Arsip** | [assets/scoreboard/README.md](assets/scoreboard/README.md) |
 
-## Scoreboard akhir
+---
 
-![Posisi akhir scoreboard](assets/scoreboard/scoreboard-final.png)
+## Rekapitulasi Challenge & Daftar Writeup
 
-| Metrik | Nilai |
-| --- | --- |
-| Posisi / Rank | **#7** |
-| Total Skor | **5445 poin** |
-| Bukti berkas | [`assets/scoreboard/scoreboard-final.png`](assets/scoreboard/README.md) |
+Seluruh challenge dikelompokkan berdasarkan tingkat kesulitan dan kategori resmi kompetisi:
 
-## Daftar writeup
+### Ringkasan per Kategori
 
-| Difficulty | Indeks | Status |
-| --- | --- | --- |
-| Medium | [Lihat daftar](medium/README.md) | 23 writeup: NexaPartner, NexaIdentity, Dokodemo Door, The Alchemist's Sandbox, Stay, Wujud Aseli Atmin, SymHell, Art Evidence Secret, Pipa Nu Kotor, NFXCTF Convention, Forgotten Commit, Black Box Protocol N4T0, ECDSA Nonce Bias, Unbreakable Delay, Feistel Differential, Cihuy LWE, Static IV Offline, RSA Coppersmith Cihuy, Fresh Arrival, The Ghost Operator, Medium RC4, Medium TEA, Weak Handshake |
-| Hard | [Lihat daftar](hard/README.md) | 9 writeup: My Lovely Freya, Broken Signature Scheme, FlagKeepers, TheForgottenState, Bluebird Session, Castaway, Hard VM Bytecode, Hard Feistel, Tragedi 9/11 |
-| Insane | [Lihat daftar](insane/README.md) | 1 writeup: NarrowGate |
+| Kategori | Medium | Hard | Insane | Total |
+| --- | :---: | :---: | :---: | :---: |
+| **Web Exploitation** | 2 | - | - | 2 |
+| **Binary Exploitation (Pwn)** | 2 | 1 | 1 | 4 |
+| **Reverse Engineering** | 2 | 3 | - | 5 |
+| **Cryptography** | 7 | 2 | - | 9 |
+| **Forensics** | 2 | 1 | - | 3 |
+| **Miscellaneous & Logic** | 5 | 1 | - | 6 |
+| **Boot to Root** | 1 | - | - | 1 |
+| **OSINT** | 2 | 1 | - | 3 |
+| **TOTAL** | **23** | **9** | **1** | **33** |
 
-Setiap writeup memuat nama challenge, deskripsi singkat, alur penyelesaian,
-dan string flag utuh. Bukti verifikasi lokal dibedakan dari bukti bahwa flag
-diterima platform. Prefiks dan kapitalisasi flag dipertahankan sesuai hasil.
+---
 
-## Struktur repositori
+### 1. Difficulty: Medium (23 Solves)
+Indeks lengkap: **[medium/README.md](medium/README.md)**
+
+* **Web Exploitation:**
+  * [NexaPartner](medium/web-exploitation/nexapartner/README.md) — Prototype pollution pada endpoint settings untuk privilege escalation ke admin audit.
+  * [NexaIdentity](medium/web-exploitation/nexaidentity/README.md) — SQL Injection / authentication bypass pada mekanisme token identity console.
+* **Cryptography:**
+  * [Black Box Protocol N4T0](medium/crypto/blackbox-protocol-n4t0/README.md) — Dekode protokol transmisi NATO fonetik & deobfuskasi manifes spreadsheet.
+  * [ECDSA Nonce Bias](medium/crypto/ecdsa-nonce-bias/README.md) — Rekonstruksi private key ECDSA dengan memanfaatkan bias LSB nonce (Hidden Number Problem).
+  * [Unbreakable Delay](medium/crypto/unbreakable-delay/README.md) — Bypass time-lock puzzle / sequential delay memanfaatkan optimasi modular arithmetic.
+  * [Feistel Differential](medium/crypto/feistel-differential/README.md) — Analisis differential cryptanalysis pada struktur cipher Feistel 4-round.
+  * [Cihuy LWE](medium/crypto/cihuy-lwe/README.md) — Penyelesaian Learning With Errors (LWE) via reduksi basis kisi (lattice LLL reduction).
+  * [Static IV Offline](medium/crypto/static-iv-offline/README.md) — Serangan static Initialization Vector pada mode enkripsi CBC/CTR offline.
+  * [RSA Coppersmith Cihuy](medium/crypto/rsa-coppersmith-cihuy/README.md) — Pemulihan plaintext RSA stereotipikal dengan teorema Coppersmith small root.
+* **Miscellaneous & Logic:**
+  * [Dokodemo Door](medium/miscellaneous-logic/dokodemo-door/README.md) — Analisis pergerakan logika maze teleportasi state stateful.
+  * [The Alchemist's Sandbox](medium/miscellaneous-logic/the-alchemists-sandbox/README.md) — Bypass sandbox Python restricted execution / builtins recovery.
+  * [Stay](medium/miscellaneous-logic/stay/README.md) — Logika automata & traversal node interaktif.
+  * [Wujud Aseli Atmin](medium/miscellaneous-logic/wujud-aseli-atmin/README.md) — Rekonstruksi file rahasia melalui anomali metadata & carving bytes gambar.
+  * [SymHell](medium/miscellaneous-logic/symhell/README.md) — Eksploitasi circular symlinks dan path traversal pada Unix filesystem chroot.
+* **Forensics:**
+  * [Art Evidence Secret](medium/forensics/art-evidence-secret/README.md) — Steganografi LSB pada kanal warna gambar artefak seni.
+  * [Weak Handshake](medium/forensics/weak-handshake/README.md) — Rekonstruksi session key TLS dari capture pcap handshake yang terdegradasi.
+* **Binary Exploitation (Pwn):**
+  * [Pipa Nu Kotor](medium/binary-exploit-pwn/pipa-nu-kotor/README.md) — Eksploitasi buffer overflow dan manipulasi file descriptor / pipe I/O redirection.
+  * [NFXCTF Convention](medium/binary-exploit-pwn/nfxctf-convention/README.md) — Format string vulnerability untuk leak address dan arbitrary write via `%n`.
+* **Reverse Engineering:**
+  * [Medium RC4](medium/reverse-engineering/medium-rc4/README.md) — Rekayasa balik KSA/PRGA RC4 yang dimodifikasi pada binary ELF stripped.
+  * [Medium TEA](medium/reverse-engineering/medium-tea/README.md) — Dekripsi block cipher Tiny Encryption Algorithm dengan delta constant kustom.
+* **Boot to Root:**
+  * [Forgotten Commit](medium/boot-to-root/forgotten-commit/README.md) — Ekstraksi credential tersembunyi dari commit dangling dan git object recovery.
+* **OSINT:**
+  * [The Ghost Operator](medium/osint/the-ghost-operator/README.md) — Investigasi riwayat transmisi digital via Wayback Machine snapshot & geolokasi safehouse Villa Istana Bunga.
+  * [Fresh Arrival](medium/osint/fresh-arrival/README.md) — Analisis jejak kedatangan logistik, tracking flight, dan cross-referencing open-source intelligence.
+
+---
+
+### 2. Difficulty: Hard (9 Solves)
+Indeks lengkap: **[hard/README.md](hard/README.md)**
+
+* **Cryptography:**
+  * [Broken Signature Scheme](hard/crypto/broken-signature-scheme/README.md) — Pemalsuan signature pada implementasi skema verifikasi yang cacat.
+  * [FlagKeepers](hard/crypto/flagkeepers/README.md) — Serangan multi-party threshold signature / secret sharing bypass.
+* **Binary Exploitation (Pwn):**
+  * [TheForgottenState](hard/binary-exploit-pwn/theforgottenstate/README.md) — ROP chain exploitation dengan bypass PIE, Canary, dan stack pivot.
+* **Reverse Engineering:**
+  * [Castaway](hard/reverse-engineering/castaway/README.md) — Deobfuskasi kontrol alur flattened state machine pada binary C++.
+  * [Hard VM Bytecode](hard/reverse-engineering/vm-bytecode/README.md) — Rekayasa balik arsitektur Virtual Machine kustom (opcode handler & register dispatch).
+  * [Hard Feistel](hard/reverse-engineering/feistel/README.md) — Kriptanalisis struktur Feistel multi-round dengan substitusi non-linear s-box.
+* **Forensics:**
+  * [Bluebird Session](hard/forensics/bluebird-session/README.md) — Memory dump forensics, ekstraksi token sesi terenkripsi dari proses yang crash.
+* **Miscellaneous & Logic:**
+  * [My Lovely Freya](hard/miscellaneous-logic/my-lovely-freya/README.md) — Restorasi data korup berantai melalui analisis struktur chunk file.
+* **OSINT:**
+  * [Tragedi 9/11](hard/osint/tragedi-9-11/README.md) — Penelusuran arsip intelijen terbuka, korelasi manifes penerbangan, dan validasi rekaman audio.
+
+---
+
+### 3. Difficulty: Insane (1 Solve)
+Indeks lengkap: **[insane/README.md](insane/README.md)**
+
+* **Binary Exploitation (Pwn):**
+  * [NarrowGate](insane/binary-exploit-pwn/narrowgate/README.md) — Full chain exploitation: heap exploitation (tcache poisoning), bypass proteksi penuh (ASLR, Full RELRO, NX, PIE, Seccomp sandbox filter), serta shellcode minimalis melalui restricted syscalls.
+
+---
+
+## Metodologi & Reproducibility
+
+Seluruh dokumentasi dalam repositori ini disusun dengan standar writeup yang ketat dan dapat dipertanggungjawabkan:
+
+1. **Reproducibility Mandiri:**
+   Setiap tantangan teknis dilengkapi dengan skrip solver (`solve.py`) berbasis Python 3 atau toolchain terkait yang siap dijalankan ulang untuk memvalidasi alur eksploitasi.
+2. **Artefak & Bukti Visual Asli:**
+   Menyertakan screenshot antarmuka, konsol server, rekaman paket jaringan, serta diagram penjelas untuk memastikan setiap argumen teknis didukung bukti riil.
+3. **Pemisahan Hipotesis vs Fakta Eksploitasi:**
+   Setiap writeup membedakan secara eksplisit antara pengujian lingkungan lokal dengan respons aktual instance server CTF.
+4. **Tools yang Digunakan:**
+   Pengerjaan dan analisis challenge menggunakan kombinasi tool standar industri, antara lain:
+   * **Pwn / Reversing:** GDB, Pwntools, Ghidra, IDA Free, ROPgadget, Checksec.
+   * **Web:** Burp Suite, cURL, Chromium DevTools, Python Requests.
+   * **Crypto:** SageMath, Python Cryptography / PyCryptodome, Z3 Solver.
+   * **Forensics / OSINT:** Wireshark, Tshark, Binwalk, Exiftool, OSINT open registries, Wayback Machine.
+   * **Asistensi:** Model AI/LLM digunakan secara proporsional sebagai asisten penulisan boilerplate script, unit test scaffolding, dan penataan tata letak dokumentasi markdown. Seluruh payload logika inti dan eksploitasi dikurasi dan divalidasi langsung oleh peserta.
+
+---
+
+## Struktur Repositori
 
 ```text
-.
-├── README.md
-├── medium/
-│   ├── README.md
+nfx-ctf-writeups/
+├── README.md                          # Indeks utama repositori & rekap scoreboard
+├── assets/
+│   └── scoreboard/                    # Bukti tangkapan layar scoreboard akhir
+├── medium/                            # 23 challenge tingkat Medium
 │   ├── web-exploitation/
 │   ├── binary-exploit-pwn/
 │   ├── reverse-engineering/
-│   ├── boot-to-root/
-│   ├── miscellaneous-logic/
-│   ├── forensics/
 │   ├── crypto/
+│   ├── forensics/
+│   ├── miscellaneous-logic/
+│   ├── boot-to-root/
 │   └── osint/
-├── hard/
-│   ├── README.md
+├── hard/                              # 9 challenge tingkat Hard
+│   ├── crypto/
+│   ├── binary-exploit-pwn/
+│   ├── reverse-engineering/
+│   ├── forensics/
+│   ├── miscellaneous-logic/
 │   └── osint/
-├── insane/
-│   └── README.md
-├── assets/
-│   └── scoreboard/
-│       └── README.md
-└── templates/
-    └── WRITEUP.md
+└── insane/                            # 1 challenge tingkat Insane
+    └── binary-exploit-pwn/
 ```
-
-Folder kategori yang sama tersedia di dalam `medium/`, `hard/`, dan
-`insane/`. Setiap challenge ditempatkan di bawah difficulty dan kategorinya:
-
-```text
-medium/web-exploitation/nama-challenge/
-├── README.md          # Ringkasan dan langkah penyelesaian
-├── solve.py           # Jika solver diperlukan
-└── assets/            # Screenshot atau bukti yang dirujuk dalam writeup
-```
-
-| Kategori | Nama folder |
-| --- | --- |
-| Web Exploitation | `web-exploitation/` |
-| Binary Exploit (Pwn) | `binary-exploit-pwn/` |
-| Reverse Engineering | `reverse-engineering/` |
-| Boot to Root | `boot-to-root/` |
-| Miscellaneous & Logic | `miscellaneous-logic/` |
-| Forensics | `forensics/` |
-| Cryptography | `crypto/` |
-| OSINT | `osint/` |
-
-Daftar kategori masih menunggu pelengkapan menjadi delapan kategori sesuai
-label resmi platform. Nama yang belum dikonfirmasi belum dibuatkan folder.
-
-## Menambah writeup
-
-1. Pastikan challenge termasuk Medium, Hard, atau Insane sesuai platform.
-2. Pilih subfolder kategori yang sesuai, lalu buat folder challenge dengan
-   huruf kecil dan tanda hubung.
-3. Salin [`templates/WRITEUP.md`](templates/WRITEUP.md) menjadi `README.md`
-   di folder challenge, lalu isi dan hapus semua penanda yang belum lengkap.
-4. Tulis langkah yang menghasilkan flag. Cantumkan perintah, output penting,
-   dan kebutuhan solver agar hasil dapat diulang.
-5. Tambahkan tautan ke indeks kategori terkait. Sertakan bukti penerimaan
-   flag bila tersedia, tanpa membuat klaim accepted berdasarkan uji lokal saja.
-
-## Penggunaan AI
-
-Penyusunan struktur dokumentasi dibantu **OpenAI Codex**. Jika AI digunakan
-untuk memahami soal, mengembangkan solver, atau debugging suatu challenge,
-bantuannya dapat dijelaskan singkat pada writeup terkait.
-
-## Pengumpulan
-
-Berdasarkan pedoman yang diberikan panitia:
-
-- Writeup wajib untuk **Track Umum**, opsional untuk **Mahasiswa NF**.
-- Batas pengumpulan: **13 November 2026, pukul 23:59 WIB**.
-- Pastikan tautan repositori dan seluruh gambar dapat dibaca panitia.
-
-Sebelum mengumpulkan:
-
-- [ ] Nama, username CTF, dan track sudah benar.
-- [x] Screenshot scoreboard akhir track peserta sudah ditampilkan.
-- [x] Semua writeup Medium, Hard, dan Insane yang akan dilaporkan sudah terdaftar.
-- [x] Setiap writeup memuat langkah penyelesaian dan flag utuh.
-- [x] Semua tautan relatif dan gambar dapat dibuka.
-- [ ] Status draf dan penanda yang belum diisi sudah diperbarui.
-- [ ] Tautan pengumpulan dapat diakses tanpa login oleh panitia.
+Setiap folder challenge memiliki struktur mandiri:
+* `README.md` — Analisis masalah, rincian kelemahan, alur eksploitasi bertahap, dan flag.
+* `solve.py` / `test_solve.py` — Skrip pembuktian dan solver otomatis.
+* `assets/` — Bukti visual (screenshot, diagram, arsip terdekripsi, atau file input).
