@@ -4,9 +4,7 @@
 
 Analisis program dan rekonstruksi algoritma atau perilakunya.
 
-## Daftar writeup
-
-- [Medium RC4](medium-rc4/README.md) — verifikasi lokal (binary menerima flag)
-- [Medium TEA](medium-tea/README.md) — verifikasi lokal (binary menerima flag)
-
-Gunakan satu folder per challenge. Setiap entri memuat nama challenge, tautan writeup, dan status verifikasi.
+| Challenge | Writeup | Verifikasi |
+| --- | --- | --- |
+| Medium RC4 | [Baca penyelesaian](medium-rc4/README.md) | Lokal; modifikasi alur KSA/PRGA RC4 pada binary ELF (binary menerima flag) |
+| Medium TEA | [Baca penyelesaian](medium-tea/README.md) | Lokal; pembalikan algoritma Tiny Encryption Algorithm dengan delta kustom (binary menerima flag) |

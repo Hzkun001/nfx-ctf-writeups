@@ -4,10 +4,8 @@
 
 Analisis program dan rekonstruksi algoritma atau perilakunya.
 
-## Daftar writeup
-
-- [Castaway](castaway/README.md) — verifikasi lokal (binary menerima flag)
-- [Hard VM Bytecode](vm-bytecode/README.md) — verifikasi lokal (binary menerima flag)
-- [Hard Feistel](feistel/README.md) — verifikasi lokal (binary menerima flag)
-
-Gunakan satu folder per challenge. Setiap entri memuat nama challenge, tautan writeup, dan status verifikasi.
+| Challenge | Writeup | Verifikasi |
+| --- | --- | --- |
+| Castaway | [Baca penyelesaian](castaway/README.md) | Live & lokal; analisis control-flow flattening dan eksekusi solver membalik transformasi state machine (binary menerima flag) |
+| Hard VM Bytecode | [Baca penyelesaian](vm-bytecode/README.md) | Lokal; disassembler kustom dan solver mengekstrak bytecode virtual machine (binary menerima flag) |
+| Hard Feistel | [Baca penyelesaian](feistel/README.md) | Lokal; kriptanalisis struktur Feistel multi-round dan rekonstruksi round keys (binary menerima flag) |

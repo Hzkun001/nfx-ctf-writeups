@@ -7,5 +7,3 @@ Tantangan forensik digital tingkat lanjut: dump sistem berkas Linux, analisis cr
 | Challenge | Writeup | Verifikasi |
 | --- | --- | --- |
 | Bluebird Session | [Baca penyelesaian](bluebird-session/README.md) | Lokal; hash shadow SHA-512 dipecahkan, dekripsi GNOME Keyring v0 AES-128-CBC tervalidasi MD5, arsip `for_nozomi.zip` terbuka |
-
-Simpan setiap writeup di `hard/kategori/nama-challenge/README.md`.

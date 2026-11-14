@@ -14,5 +14,3 @@ matematis lemah.
 | Cihuy LWE | [Baca penyelesaian](cihuy-lwe/README.md) | Lokal; pemulihan rahasia LWE ternary via Kannan embedding LLL/BKZ, PRF counter SHA-256 terverifikasi |
 | Static IV Offline | [Baca penyelesaian](static-iv-offline/README.md) | Lokal; derivasi kunci AES-256-CBC dari MASTER & counter, unpadding PKCS#7, flag terdekripsi sempurna |
 | RSA Coppersmith Cihuy | [Baca penyelesaian](rsa-coppersmith-cihuy/README.md) | Lokal; reduksi kisi Howgrave-Graham LLL via python-flint, pemulihan 212-bit LSB p, faktorisasi modulus n 1024-bit, dekripsi flag RSA |
-
-Simpan setiap writeup di `medium/kategori/nama-challenge/README.md`.
