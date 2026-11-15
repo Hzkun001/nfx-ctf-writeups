@@ -16,8 +16,14 @@ Soal menyediakan implementasi cipher Feistel 7-round dengan ukuran blok 32-bit
 (dibagi menjadi dua paruh 16-bit $L$ dan $R$). Kunci master berukuran 112-bit
 yang dipecah menjadi 7 subkunci independen 16-bit ($K_0$ hingga $K_6$).
 Fungsi ronde $F(x, K)$ melakukan XOR terhadap subkunci, substitusi 4-bit SBOX,
-dan permutasi bit/nibble. Diberikan berkas `pairs.txt` berisi kumpulan pasangan
-plaintext-ciphertext dengan perbedaan input $\Delta P$ tertentu, serta `flag.enc`.
+dan permutasi nibble. Diberikan `pairs.txt` dan `flag.enc`.
+
+`pairs.txt` memuat **14 blok**, masing-masing diawali baris
+`# input difference: <ΔP>` lalu **20.000 baris** `P C1 C2`, dengan
+`C1 = enc(P)` dan `C2 = enc(P ⊕ ΔP)`. Jadi tiap baris adalah satu pasangan
+plaintext yang selisihnya tepat $\Delta P$. Blok pertama memakai
+$\Delta P = \mathtt{0000000a}$ (hanya nibble terbawah $R$ yang aktif, bernilai
+`0xa`).
 
 Celah utama terletak pada properti diferensial SBOX 4-bit dan ketiadaan difusi
 antarnibble yang kuat (permutasi hanya menukar posisi nibble tanpa pencampuran
@@ -45,38 +51,63 @@ def round_f(x, k):
     return permute(m)
 ```
 
-Tabel Distribusi Diferensial (DDT) SBOX dihitung untuk seluruh kemungkinan
-input diff $\Delta x \in [0, 15]$ dan output diff $\Delta y \in [0, 15]$.
-SBOX memiliki diferensial berprobabilitas tinggi (hingga $p = 6/16$ atau $8/16$
-pada pola tertentu). Fungsi permutasi bit menukar posisi pasangan nibble
-$0 \leftrightarrow 1$ dan $2 \leftrightarrow 3$ tanpa mengubah nilai nibble.
+`SBOX = [1,8,14,12,2,0,3,4,11,9,15,13,6,10,7,5]`. Tabel Distribusi Diferensial
+(DDT) dihitung dari `DDT[Δx][Δy] = #{x : SBOX[x] ⊕ SBOX[x⊕Δx] = Δy}`. Entri
+yang menjadi tulang punggung serangan:
+
+| $\Delta x$ | $\Delta y$ terbaik | Jumlah | Probabilitas |
+| --- | --- | ---: | --- |
+| `0xa` | `0x5` | 12/16 | **3/4** |
+| `0x5` | `0xa` | 8/16 | 1/2 |
+
+Permutasi hanya menukar posisi pasangan nibble ($0 \leftrightarrow 1$,
+$2 \leftrightarrow 3$) tanpa mengubah nilai nibble, jadi tidak ada difusi
+antar-nibble; satu nibble aktif tetap satu nibble aktif sepanjang trail.
 
 ### 2. Pelacakan karakteristik diferensial (*trail*)
 
-Dengan DDT dan permutasi yang merupakan involusi, kita dapat menelusuri
-karakteristik diferensial berprobabilitas tertinggi dari ronde awal:
+Mulai dari $(\Delta L_0, \Delta R_0) = (\mathtt{0000}, \mathtt{000a})$ dan ambil
+transisi SBOX paling mungkin di tiap ronde. Karena hanya satu nibble aktif,
+trail-nya bolak-balik antara `0xa` dan `0x5`:
 
-$$(\Delta L_0, \Delta R_0) \xrightarrow{r\text{ ronde}} (\Delta L_r, \Delta R_r)$$
+| Setelah ronde | $\Delta L$ | $\Delta R$ | Prob. kumulatif |
+| ---: | --- | --- | --- |
+| 1 | `000a` | `0050` | 3/4 |
+| 2 | `0050` | `0000` | 9/16 |
+| 3 | `0000` | `0050` | 9/16 |
+| 4 | `0050` | `000a` | 27/128 |
+| 5 | `000a` | `0000` | ≈ 0,141 |
+| 6 | `0000` | `000a` | ≈ 0,141 |
 
-Untuk ronde terakhir ke-7:
+Karakteristik 6-round berakhir di $(\Delta L_6, \Delta R_6) =
+(\mathtt{0000}, \mathtt{000a})$. Pada ronde terakhir (ke-7):
 $$C_L = R_6, \quad C_R = L_6 \oplus F(R_6, K_6)$$
-Perbedaan pada ciphertext memenuhi:
-$$\Delta C_L = \Delta R_6, \quad \Delta C_R = \Delta L_6 \oplus \Delta F(R_6, K_6)$$
+sehingga
+$$\Delta C_L = \Delta R_6 = \mathtt{000a}, \quad
+\Delta C_R = \Delta L_6 \oplus \Delta F(R_6, K_6).$$
 
-Jika kita memilih pasangan dengan $\Delta C_L = \Delta R_6$ (sesuai prediksi
-karakteristik 6-round), maka output diferensial dari $F$ adalah:
-$$\Delta F = \Delta C_R \oplus \Delta L_6$$
+Pasangan yang mengikuti karakteristik ini akan menunjukkan
+$\Delta C_L = \mathtt{000a}$; pasangan dengan $\Delta C_L$ lain dibuang sebagai
+*noise*. Untuk pasangan yang lolos filter, selisih keluaran $F$ pada ronde
+terakhir adalah $\Delta F = \Delta C_R \oplus \Delta L_6$.
 
 ### 3. Pemulihan kunci ronde (*round peeling*)
 
-Karena $F$ beroperasi secara independen per nibble sebelum permutasi, kandidat
-nibble subkunci $K_{6, \text{nib}}$ dapat di-*voting* satu per satu:
+Karena $F$ memproses tiap nibble secara independen sebelum permutasi, nibble
+subkunci $K_6$ dipulihkan satu per satu dengan *voting*. Input SBOX pada ronde
+ke-7 adalah nibble dari $C_L$, dan karena permutasi, keluaran nibble posisi
+`nib` muncul di posisi pasangannya (`0↔1`, `2↔3`) pada $\Delta F$.
 
-1. Untuk setiap pasangan valid, hitung output diff pada nibble pasangan.
-2. Uji 16 kemungkinan nilai nibble subkunci. Jika $\text{SBOX}(x_1 \oplus k) \oplus \text{SBOX}(x_2 \oplus k) == \Delta y$, tambahkan *vote*.
-3. Nibble dengan suara terbanyak dipilih sebagai subkunci ronde tersebut.
-4. Lakukan dekripsi satu ronde ke belakang (*peel*) pada seluruh ciphertext menggunakan subkunci yang baru diperoleh.
-5. Ulangi proses untuk memulihkan $K_5$, $K_4$, $K_3$, $K_2$, dan $K_1$.
+1. Saring pasangan yang $\Delta C_L = \mathtt{000a}$ (mengikuti karakteristik).
+2. Untuk tiap pasangan, baca input diff dari $\Delta C_L$ dan output diff dari
+   $\Delta F$ pada nibble yang bersangkutan.
+3. Uji 16 nilai nibble kunci: jika $\text{SBOX}(x_1 \oplus k) \oplus
+   \text{SBOX}(x_2 \oplus k) = \Delta y$, tambah satu *vote*.
+4. Kunci yang benar muncul pada **setiap** pasangan valid, sedangkan kunci salah
+   hanya sesekali, sehingga nibble dengan suara terbanyak menang telak. Ke-14
+   blok $\Delta P$ ikut memberi suara agar seluruh nibble $K_6$ tercakup.
+5. Kupas satu ronde (*peel*): dekripsi semua ciphertext satu ronde ke belakang
+   dengan $K_6$, lalu ulangi untuk $K_5, K_4, K_3, K_2, K_1$.
 
 ### 4. Pemulihan $K_0$ dan dekripsi flag
 
