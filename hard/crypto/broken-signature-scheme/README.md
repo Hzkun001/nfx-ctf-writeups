@@ -111,4 +111,4 @@ diubah; faktor dan tanda tangan palsu tidak dimasukkan ke repo.
 ## Penggunaan AI
 
 OpenAI Codex membantu merancang pencarian subset tanda tangan, faktorisasi
-Fermat, penurunan kunci SHA256(p||q), dan penyuntingan writeup.
+Fermat, penurunan kunci SHA256(p||q).
