@@ -23,7 +23,10 @@ def solve(tar_path=None, blob_path=None):
     with tempfile.TemporaryDirectory() as tmpdir:
         # Extract archive
         with tarfile.open(tar_path, 'r:*') as tar:
-            tar.extractall(path=tmpdir)
+            if hasattr(tarfile, "data_filter"):
+                tar.extractall(path=tmpdir, filter="data")
+            else:
+                tar.extractall(path=tmpdir)
 
         repo_dir = tmpdir
         # Find directory containing .git

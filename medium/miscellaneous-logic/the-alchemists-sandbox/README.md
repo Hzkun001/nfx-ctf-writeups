@@ -143,8 +143,3 @@ menghasilkan `flag.txt` serta `payload.txt` di folder solver. Enkripsi ulang
 32 putaran diperiksa sebelum hasil ditampilkan. File keluaran dengan isi
 berbeda tidak ditimpa. Payload dapat ditempel sebagai satu baris pada
 prompt `formula>` layanan tantangan yang menjalankan filter serupa.
-
-## Penggunaan AI
-
-OpenAI Codex membantu membaca filter AST, menyusun payload bebas karakter
-terlarang, membalik transformasi, menguji solver, dan menulis dokumentasi.

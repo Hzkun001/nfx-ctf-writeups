@@ -2,6 +2,7 @@
 """Unit test untuk solver Weak Handshake."""
 
 import hashlib
+import shutil
 import tempfile
 import unittest
 from pathlib import Path
@@ -25,6 +26,9 @@ from solve import (
 ENDING_SHA256 = "6af3547729d20261bd77d7b9196afab088f7ee0d5e3e272871e94281d36d2575"
 
 
+needs_tshark = unittest.skipUnless(shutil.which("tshark"), "membutuhkan tshark di PATH")
+
+
 def load_session(client_port: int):
     rows = tshark_fields(
         TARGET_FILE, f"tcp.port=={SERVER_PORT} && tcp.len>0",
@@ -44,6 +48,7 @@ class TestWeakHandshake(unittest.TestCase):
         got = hashlib.sha256(TARGET_FILE.read_bytes()).hexdigest()
         self.assertEqual(got, EXPECTED_SHA256)
 
+    @needs_tshark
     def test_dua_sesi_tls(self):
         """Harus ada dua port klien berbeda (sesi begin & ending)."""
         rows = tshark_fields(
@@ -55,6 +60,7 @@ class TestWeakHandshake(unittest.TestCase):
         })
         self.assertEqual(len(clients), 2)
 
+    @needs_tshark
     def test_sertifikat_rsa_1024_prima_berdekatan(self):
         """Sertifikat memakai RSA 1024-bit dengan q - p = 236 (lemah)."""
         _, s2c = load_session(56422)
@@ -68,6 +74,7 @@ class TestWeakHandshake(unittest.TestCase):
         self.assertEqual(q - p, 236)
         self.assertEqual(p.bit_length(), 512)
 
+    @needs_tshark
     def test_cipher_suite_dan_ems(self):
         """ServerHello: cipher 0x002f dan ekstensi 0x0017 (extended master secret)."""
         _, s2c = load_session(56422)
@@ -91,6 +98,7 @@ class TestWeakHandshake(unittest.TestCase):
         self.assertEqual(len(a), 48)
         self.assertNotEqual(a, prf(b"secret", b"other", b"seed", 48))
 
+    @needs_tshark
     def test_reproduksi_gambar_identik(self):
         """Dekripsi harus menghasilkan JPEG yang identik byte-per-byte."""
         from solve import decrypt_session, extract_jpeg

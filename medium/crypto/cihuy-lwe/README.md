@@ -22,7 +22,7 @@ Karena rasio sampel terhadap dimensi ($m/n = 1{,}6$) cukup tinggi dan noise sang
 
 | Berkas | Ukuran | SHA256 |
 | --- | --- | --- |
-| `assets/lwe.py` | 13.064 B | `6a996ad10f8ee04aed2f3befe3f1268b2b4bff8c9d6c6740b2cd88db0a623e1c` |
+| `assets/lwe.py` | 33.679 B | `6a996ad10f8ee04aed2f3befe3f1268b2b4bff8c9d6c6740b2cd88db0a623e1c` |
 
 Struktur data pada berkas soal terdiri dari:
 - Modulus $q = 257$
@@ -72,7 +72,7 @@ Setelah baris yang memiliki nilai kolom terakhir $\pm 4$ ditemukan:
 1. Ekstrak vektor $s$ dan $e$.
 2. Verifikasi keabsahan dengan memastikan bahwa $(A s + e) \pmod{257} == b$ untuk seluruh 64 sampel.
 3. Representasikan elemen bertanda $s_i \in \{-1, 0, 1\}$ ke dalam bentuk unsigned byte (di mana $-1 \equiv 255 = \text{0xFF}$). Ini menghasilkan seed sepanjang 40 byte.
-4. Fungsi pembangkit keystream pada soal menggunakan PRF berbasis HMAC/counter SHA-256:
+4. Fungsi pembangkit keystream pada soal menggunakan SHA-256 dalam mode counter:
 
 $$\text{stream} = \text{SHA256}(\text{seed} \parallel \text{counter.to\_bytes}(4, \text{'big'}))$$
 
@@ -110,7 +110,3 @@ python3 -m unittest -v
 - Berkas tantangan terverifikasi: [assets/lwe.py](assets/lwe.py) (SHA256: `6a996ad10f8ee04aed2f3befe3f1268b2b4bff8c9d6c6740b2cd88db0a623e1c`).
 - Solver teruji: [solve.py](solve.py).
 - Pengujian unit otomatis: [test_solve.py](test_solve.py).
-
-## Penggunaan AI
-
-Pengembangan solver dan penyusunan kisi embedding Kannan dibantu oleh model AI untuk memformulasikan relasi reduksi matriks $(m+n+1) \times (m+n+1)$ serta verifikasi batasan norm secara eksak.

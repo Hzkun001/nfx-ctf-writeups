@@ -24,8 +24,9 @@ big-endian** menghasilkan byte ASCII. Menggabungkan ketiganya dengan pola
 ### 1. Baca workbook tanpa menjalankannya
 
 XLSX adalah ZIP; baca `xl/sharedStrings.xml` dan `xl/worksheets/sheet1.xml`
-langsung dengan pustaka standar. Jangan buka di Excel/LibreOffice karena itu
-menjalankan berkas yang tidak dipercaya.
+langsung dengan pustaka standar. Cara ini memperlihatkan nilai mentah sel
+(termasuk angka yang tersimpan sebagai number) tanpa pembulatan atau format
+tampilan dari aplikasi spreadsheet.
 
 Berkas input: **5.823 byte**, SHA256
 `afeb670e8f99e98968d8d1d14db12f267ac2b639ae47ce4602992bfe76518b3b`.
@@ -113,8 +114,3 @@ masukan tidak diubah.
 - [Workbook asli](assets/flight_recovery_manifest.xlsx), SHA256
   `afeb670e…8b3b`.
 - Tabel decoding kolom A/B/C di atas.
-
-## Penggunaan AI
-
-OpenAI Codex membantu pembacaan XML workbook, pengujian hipotesis kolom C
-(float32 vs integer), dan penyuntingan writeup.

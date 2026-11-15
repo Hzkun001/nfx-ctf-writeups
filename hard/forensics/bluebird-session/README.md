@@ -25,7 +25,8 @@ Penyelesaian memerlukan pembongkaran rantai kriptografi multi-lapis:
    AES-128-CBC) dan diautentikasi dengan checksum MD5.
 3. Plaintext rahasia berjudul *"Mizore Promise Note"* membocorkan kata sandi arsip:
    `MizoreCanFly2077!@`.
-4. Berkas `for_nozomi.zip` dibuka untuk mengambil artefak memori dan flag.
+4. Password arsip `for_nozomi.zip` tersebut, dibungkus format `NFX{...}`,
+   menjadi flag. Arsipnya sendiri berisi artefak kenangan (catatan, gambar, video).
 
 Selain jalur forensik terencana, terdapat celah kebocoran operasional (*unintended*)
 pada file `.bash_history` milik `nozomi` yang mencatat perintah `7z` beserta argumen
@@ -134,13 +135,13 @@ Format flag resmi event NFX CTF:
 NFX{MizoreCanFly2077!@}
 ```
 
-> **Catatan:** Pada platform kompetisi dengan prefix varian `NXCTF` atau `nxctf`,
-> nilai flag yang setara adalah `NXCTF{MizoreCanFly2077!@}` atau `nxctf{MizoreCanFly2077!@}`.
-> Kredensial akun Mizore yang dipulihkan adalah `Bluebirds1927!`.
+> **Catatan:** Flag adalah password arsip `for_nozomi.zip` yang dibungkus format
+> `NFX{...}`. Pemeriksaan isi arsip pada writeup ini tidak menemukan string flag
+> terpisah.
 
 ## Reproduksi
 
-Dependensi: Python 3.10+ dan **PyCryptodome** (`pip install pycryptodome`).
+Dependensi: Python 3.10+ dan **PyCryptodome** (`pip install -r requirements.txt`).
 
 Jalankan solver otomatis:
 
@@ -165,9 +166,3 @@ dan mengekstrak flag secara deterministik.
 - [assets/README.txt](assets/README.txt): Catatan yang diekstrak dari `for_nozomi.zip`.
 - [solve.py](solve.py): Implementasi mandiri dekripsi biner GNOME Keyring.
 - [test_solve.py](test_solve.py): Pengujian unit integritas dan penolakan password salah.
-
-## Penggunaan AI
-
-Analisis spesifikasi biner format GNOME Keyring v0 (`dump-keyring0-format.c`) dan
-rekonstruksi fungsi `egg_symkey_generate_simple` dibantu oleh AI untuk mengoreksi
-bug offset pembacaan ciphertext pada perkakas open-source lama.

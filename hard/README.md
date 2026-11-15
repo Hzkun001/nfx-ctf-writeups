@@ -10,12 +10,12 @@ Daftar 9 challenge tingkat kesulitan **Hard** yang berhasil diselesaikan pada NF
 
 | Kategori | Challenge | Deskripsi Singkat |
 | --- | --- | --- |
-| **Cryptography** | [Broken Signature Scheme](crypto/broken-signature-scheme/README.md) | Pemalsuan tanda tangan kriptografis akibat cacat verifikasi parameter. |
-| | [FlagKeepers](crypto/flagkeepers/README.md) | Analisis threshold secret sharing dan bypass validasi tanda tangan multi-partai. |
-| **Binary Exploitation (Pwn)** | [TheForgottenState](binary-exploit-pwn/theforgottenstate/README.md) | Eksploitasi ROP chain canggih dengan bypass proteksi Canary, PIE, dan stack pivoting. |
-| **Reverse Engineering** | [Castaway](reverse-engineering/castaway/README.md) | Deobfuskasi control-flow flattening state machine pada binary C++. |
-| | [Hard VM Bytecode](reverse-engineering/vm-bytecode/README.md) | Reverse engineering interpreter kustom, opcode dispatching, dan virtual register. |
-| | [Hard Feistel](reverse-engineering/feistel/README.md) | Kriptanalisis struktur Feistel multi-round dengan substitusi S-Box non-linear. |
-| **Forensics** | [Bluebird Session](forensics/bluebird-session/README.md) | Analisis crash memory dump untuk mengekstrak token sesi terenkripsi. |
-| **Miscellaneous & Logic** | [My Lovely Freya](miscellaneous-logic/my-lovely-freya/README.md) | Rekonstruksi struktur chunk berkas biner gambar yang terfragmentasi dan korup. |
-| **OSINT** | [Tragedi 9/11](osint/tragedi-9-11/README.md) | Investigasi intelijen terbuka rekaman audio transmisi penerbangan dan dokumen manifes. |
+| **Cryptography** | [Broken Signature Scheme](crypto/broken-signature-scheme/README.md) | Tanda tangan RSA multiplicative dipalsukan, n difaktorkan Fermat, kunci AES-GCM dari `p‖q`. |
+| | [FlagKeepers](crypto/flagkeepers/README.md) | Nonce reuse AES-GCM → H dipulihkan lewat GCD polinomial → tag palsu untuk `admin = True`. |
+| **Binary Exploitation (Pwn)** | [TheForgottenState](binary-exploit-pwn/theforgottenstate/README.md) | Use-after-free pada `table[i]` → fake header untuk arbitrary R/W → `free@got` jadi `system`. |
+| **Reverse Engineering** | [Castaway](reverse-engineering/castaway/README.md) | State berantai bergantung pada ciphertext sehingga tiap byte bisa dibalik; opaque predicate selalu false. |
+| | [Hard VM Bytecode](reverse-engineering/vm-bytecode/README.md) | Resolve jump table VM, lalu balik blok LOAD/XOR/ADD/ROL/CMP per karakter. |
+| | [Hard Feistel](reverse-engineering/feistel/README.md) | Feistel 16 ronde dibalik dengan round key dari `.rodata` dan ciphertext di `.data`. |
+| **Forensics** | [Bluebird Session](forensics/bluebird-session/README.md) | Crack hash shadow, dekripsi GNOME Keyring v0, lalu password arsip dipakai sebagai flag. |
+| **Miscellaneous & Logic** | [My Lovely Freya](miscellaneous-logic/my-lovely-freya/README.md) | Tinggi PNG dipulihkan dari panjang scanline; password di gambar membuka surat AES-256-CBC. |
+| **OSINT** | [Tragedi 9/11](osint/tragedi-9-11/README.md) | Pengunggah video di Reddit → akun GitHub → flag di riwayat commit `.env`. |

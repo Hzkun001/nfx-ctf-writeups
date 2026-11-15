@@ -16,8 +16,8 @@ Soal menyediakan berkas gambar PNG bernama `dokumentasi.png`. Pemeriksaan
 struktur biner menunjukkan adanya arsip ZIP yang disisipkan (appended)
 setelah chunk penutup standar PNG (`IEND`). Di dalam arsip ZIP tersebut
 terdapat berkas `catatan.txt` dan `scan_07.dat`. Berkas `scan_07.dat`
-sejatinya merupakan gambar PNG yang telah dirusak 8 byte magic signature
-awalnya (ter-nolkan). Setelah signature dan chunk length diperbaiki, ekstraksi
+sejatinya merupakan gambar PNG yang 8 byte magic signature awalnya
+di-nol-kan. Setelah signature dipulihkan, ekstraksi
 bit paling tidak signifikan (**LSB**) pada kanal warna merah (**Red**)
 mengungkap string Base64 yang mendekode langsung ke flag kompetisi.
 
@@ -34,11 +34,11 @@ Berkas input adalah PNG dengan metadata ukuran:
 ![Berkas lampiran dokumentasi.png](assets/dokumentasi.png)
 
 Pemeriksaan akhir chunk PNG menemukan bahwa marker `IEND` (`49 45 4E 44 AE 42 60 82`)
-diikuti oleh signature arsip ZIP (`PK\x03\x04` pada offset `0x1434ce`):
+diikuti oleh signature arsip ZIP (`PK\x03\x04` pada offset `0x14363c`):
 
 ```text
-001434c0: 0000 0000 4945 4e44 ae42 6082 504b 0304  ....IEND.B`.PK..
-001434d0: 1400 0000 0800 ...
+00143630: 0000 0000 4945 4e44 ae42 6082 504b 0304  ....IEND.B`.PK..
+00143640: 1400 0000 0800 052f 685d 1e14 65a4 2b00  ......./h]..e.+.
 ```
 
 ### 2. Ekstraksi arsip dan perbaikan header PNG
@@ -55,8 +55,11 @@ tetapi 8 byte pertama bernilai nol:
 00000010: 0000 0190 0000 012c 0802 0000 0062 d572  .......,.....b.r
 ```
 
-Chunk type `IHDR` berada pada offset `0x0C` dengan panjang `0x0000000D` pada offset `0x08`.
-Dengan merekonstruksi 12 byte awal menjadi signature resmi PNG:
+Chunk type `IHDR` berada pada offset `0x0C` dengan panjang `0x0000000D` pada
+offset `0x08`; panjang chunk itu masih utuh (tiga byte nol pertamanya memang
+bagian dari nilai `0x0000000D`). Yang rusak hanya 8 byte signature, jadi cukup
+tulis ulang signature resmi PNG (kode di bawah menulis ulang 12 byte sekaligus
+termasuk field panjang yang nilainya sama):
 
 ```python
 png_header = bytes([0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A, 0x00, 0x00, 0x00, 0x0D])
@@ -115,7 +118,3 @@ python3 -m unittest -v
 - [assets/dokumentasi.png](assets/dokumentasi.png): berkas input tantangan.
 - [solve.py](solve.py): skrip otomatisasi ekstraksi dan dekode.
 - [test_solve.py](test_solve.py): unit test pemastian integritas berkas dan flag.
-
-## Penggunaan AI
-
-Analisis perbaikan chunk PNG yang rusak serta identifikasi steganografi LSB pada kanal warna merah dibantu oleh AI.

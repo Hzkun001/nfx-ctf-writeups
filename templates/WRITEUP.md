@@ -43,8 +43,3 @@ dan hasil yang diharapkan. Jika tidak diperlukan, bagian ini dapat dihapus.]
 
 [Tambahkan tautan relatif screenshot atau artefak yang dirujuk.
 Hapus bagian ini bila bukti sudah ditempatkan pada langkah penyelesaian.]
-
-## Penggunaan AI (opsional)
-
-[Jika digunakan, sebutkan chatbot atau agent serta bantuan konkretnya.
-Cantumkan model hanya jika diketahui. Hapus bagian ini jika tidak dipakai.]

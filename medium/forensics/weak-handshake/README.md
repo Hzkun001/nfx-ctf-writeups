@@ -152,7 +152,7 @@ NFX{D36A64128F80788B60C677EF94FA7157}
 Butuh `tshark`, `openssl`, dan paket Python `cryptography`:
 
 ```bash
-pip install cryptography
+pip install -r requirements.txt
 
 # 1. Jalankan solver (menulis ending.jpg)
 python3 solve.py
@@ -177,10 +177,3 @@ PRF, **reproduksi gambar identik byte-per-byte**, dan penolakan input berubah.
   direproduksi identik oleh solver.
 - Modulus RSA 1024-bit, `q - p = 236`; cipher `0x002f`; ekstensi `0x0017`.
 - Teks overlay pada gambar: `{D36A64128F80788B` / `60C677EF94FA7157}`.
-
-## Penggunaan AI
-
-Penyusunan solver (faktorisasi Fermat, derivasi key TLS 1.2 dengan extended
-master secret, penanganan padding `pad+1`) dan penyuntingan naskah writeup
-dibantu oleh model AI; seluruh langkah analisis dan verifikasi dijalankan ulang
-secara lokal.

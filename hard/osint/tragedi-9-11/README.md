@@ -81,14 +81,24 @@ cd xor-operation
 git log --oneline --stat
 ```
 
-Riwayat commit menampilkan urutan:
+Riwayat commit (`git log --oneline`, terbaru di atas):
 ```text
+c00a353 feat : change decrypt service.go
+1433bb3 feat : add decrypt_service.go
+4fe9d80 feat : add decrypt_api.go
 d7909fd feat : remove config in .env.example
+43de7b7 feat : add .gitignore
 ea765a9 chore : deleted .env
+62d5640 feat : add main.go
 df34505 add .env
-562afdcb add dto
+7d821ca feat : add internal
+562afdc add dto
 44dbfab feat : add domain
 ```
+
+Commit `df34505` menambahkan `.env` dan `.env.example`. Keduanya dibersihkan
+pada commit berikutnya (`ea765a9`, `d7909fd`), lalu `.gitignore` ditambahkan
+(`43de7b7`).
 
 Memeriksa perbedaan perubahan (*diff*) pada commit `df34505b8a8ce9a97bac2bf57fec359097a0d815`:
 
@@ -156,7 +166,7 @@ Solver dan unit test hanya membutuhkan pustaka standar Python 3 (3.10+):
 
 3. **Jalankan pengujian unit (unit tests):**
    ```bash
-   python3 -m unittest -v test_solve.py
+   python3 -m unittest -v
    ```
 
 ## Bukti
@@ -164,8 +174,3 @@ Solver dan unit test hanya membutuhkan pustaka standar Python 3 (3.10+):
 - Berkas patch commit tersimpan di [`assets/commit_df34505.patch`](assets/commit_df34505.patch) (SHA256: `5f3fd8b3fc5aa9cb0545f5d947d0af543a5e16c0df6fd73e43558af400c43f39`).
 - Tangkapan layar cuplikan video tersimpan di [`assets/preview.jpg`](assets/preview.jpg).
 - Teks deskripsi soal asli tersimpan di [`assets/soal.txt`](assets/soal.txt).
-
-## Penggunaan AI (opsional)
-
-OpenAI Codex dan Google DeepMind Antigravity membantu verifikasi rantai petunjuk soal,
-pemilahan konteks forum vs artefak visual video, serta penyusunan solver dan dokumentasi pengujian.

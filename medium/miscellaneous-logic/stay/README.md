@@ -126,8 +126,3 @@ penolakan kandidat kata kunci yang tidak menghasilkan flag.
 Pemeriksaan byte merujuk pada salinan UTF-8 pesan chat yang diterima;
 berkas byte asli sebelum pengiriman chat tidak tersedia. Metode kandidat
 kata ini bersifat heuristik dan sesuai dengan input tantangan ini.
-
-## Penggunaan AI
-
-OpenAI Codex membantu inventarisasi code point, pengujian pemetaan bit,
-pemeriksaan lapisan XOR, verifikasi pengodean balik, dan penyusunan writeup.

@@ -13,16 +13,16 @@
 ## Ringkasan
 
 Binary validator memakai **TEA (Tiny Encryption Algorithm) 32 ronde** dengan kunci
-128-bit yang tertanam. Input dibaca dari `argv[1]`, panjangnya harus tepat
-`0x28` (40 byte), lalu di-pad nol ke kelipatan 8 byte. Setiap blok 64-bit
+128-bit yang tertanam. Input dibaca dari `argv[1]` dan panjangnya harus tepat
+`0x28` (40 byte), yaitu lima blok 64-bit. Setiap blok
 dienkripsi dan hasilnya dibandingkan dengan ciphertext 40 byte di `.rodata`.
 
 Dua hal membuat soal ini mudah dibalik:
 
 1. **Konstanta kunci diobfuskasi sebagai pengurangan.** Disassembly tidak memuat
    `0xcafebabe`/`0xdeadc0de` secara literal, melainkan `sub 0x35014542` dan
-   `sub 0x21523f22`. Karena keduanya operasi 32-bit, hasilnya adalah nilai
-   dua's-complement dari konstanta aslinya.
+   `sub 0x21523f22`. Karena keduanya operasi 32-bit, operand tersebut adalah
+   komplemen dua (negasi) dari konstanta aslinya.
 2. **TEA bersifat invertible.** Struktur Feistel-nya memungkinkan dekripsi
    dengan menjalankan ronde terbalik tanpa perlu menginversi fungsi F.
 
@@ -152,8 +152,3 @@ diubah.
 - Output verifikasi: `./assets/medium_tea '<flag>'` → `Correct! TEA terpecahkan.`
 - Enkripsi ulang plaintext yang dipulihkan menghasilkan ciphertext identik
   dengan yang tersimpan di binary (diuji otomatis).
-
-## Penggunaan AI
-
-Penyusunan solver (ronde TEA terbalik) dan penyuntingan naskah writeup dibantu
-oleh model AI; seluruh langkah analisis dan verifikasi dijalankan ulang secara lokal.

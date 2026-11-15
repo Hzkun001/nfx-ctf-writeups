@@ -17,7 +17,7 @@ dengan interpreter berbasis *jump table*. Setiap karakter diproses oleh satu blo
 lima instruksi tetap — **LOAD, XOR, ADD, ROL, CMP** — dan program terdiri dari 33
 blok (33 karakter flag) ditutup opcode **HALT**.
 
-Karena setiap blok hanya berisi operasi satu arah yang semuanya dapat dibalik
+Karena setiap blok hanya berisi operasi sederhana yang semuanya dapat dibalik
 (`ROL`, `ADD`, `XOR`), flag dapat dipulihkan langsung dari operand `CMP` tiap
 blok tanpa perlu mengeksekusi VM-nya sama sekali. Tidak ada cabang, tidak ada
 umpan balik antarblok — cukup satu pass.
@@ -88,7 +88,7 @@ dipakai karena interpreter menolak opcode 0 lebih dulu (`test al,al; je wrong`).
 Jadi tiap karakter dihitung independen:
 
 ```text
-t = rol8( flag[i] ^ k1 + k2 , r )
+t = rol8(((flag[i] ^ k1) + k2) & 0xff, r)
 ```
 
 ### 4. Membalik transformasi
@@ -153,9 +153,3 @@ HALT, inversi rotasi, dan penolakan berkas yang dimodifikasi.
 - Output verifikasi: `./assets/hard_vm '<flag>'` → `Correct! Bytecode VM berhasil dibongkar.`
 - VM reimplementasi (LOAD/XOR/ADD/ROL/CMP) meloloskan flag yang dipulihkan dan
   menolak flag salah — diuji otomatis.
-
-## Penggunaan AI
-
-Penyusunan solver (resolve tabel dispatch dan pembalikan blok instruksi) serta
-penyuntingan naskah writeup dibantu oleh model AI; seluruh langkah analisis dan
-verifikasi dijalankan ulang secara lokal.

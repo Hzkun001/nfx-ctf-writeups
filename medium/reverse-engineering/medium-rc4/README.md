@@ -118,8 +118,3 @@ Berkas masukan tidak diubah.
   (SHA256: `cc8b962d1501755603febfb884c5c49b42d9814aff165ed21d9cc81cda71d0f1`).
 - Tabel lokasi kunci (`0x2021`) dan ciphertext (`0x2060`) di `.rodata`.
 - Output verifikasi: `./assets/medium_rc4 '<flag>'` → `Correct! RC4 memang simetris.`
-
-## Penggunaan AI
-
-Penyusunan solver (KSA/PRGA) dan penyuntingan naskah writeup dibantu oleh model AI;
-seluruh langkah analisis dan verifikasi dijalankan ulang secara lokal.

@@ -108,7 +108,3 @@ Keluaran solver:
 - Berkas implementasi soal: [assets/chall.py](assets/chall.py).
 - Skrip solver kisi Howgrave-Graham LLL: [solve.py](solve.py).
 - Pengujian unit otomatis: [test_solve.py](test_solve.py).
-
-## Penggunaan AI
-
-Formulasi kisi Coppersmith Howgrave-Graham berdimensi $6 \times 6$ dan integrasi FLINT integer polynomial solver dioptimalkan dengan bantuan AI untuk memastikan reduksi LLL berjalan cepat dan deterministik.

@@ -6,7 +6,6 @@
 | --- | --- |
 | Kategori | OSINT |
 | Difficulty | Medium |
-| Author | SecOps / NetMetrics Internal |
 | Lampiran / sumber | `investigation.zip` ([GitHub Raw](https://raw.githubusercontent.com/NFCC-Com/qazwsx/refs/heads/main/osint/investigation.zip)) |
 | Verifikasi | Publik & lokal: verifikasi commit GPG signature `ghost-route-0914`, arsip Wayback Machine transmisi Dimas Wirawan (Ghost Operator), dan geolokasi safehouse Villa Istana Bunga Lembang terkonfirmasi |
 
@@ -209,7 +208,7 @@ python3 solve.py
 python3 solve.py --online
 
 # 3. Jalankan rangkaian pengujian otomatis
-python3 -m unittest -v test_solve.py
+python3 -m unittest -v
 ```
 
 Keluaran solver:
@@ -226,9 +225,3 @@ Keluaran solver:
 * [assets/rentry_transmission.txt](assets/rentry_transmission.txt) — Transkrip pesan evakuasi `[BURST TRANSMISSION - 0914]`.
 * [assets/wayback-transmission.png](assets/wayback-transmission.png) — Screenshot arsip transmisi evakuasi di Wayback Machine.
 * [assets/safehouse-location.png](assets/safehouse-location.png) — Screenshot peta geolokasi Villa Istana Bunga di Jl. Kolonel Masturi KM 9, Parongpong, Lembang.
-
----
-
-## Penggunaan AI (opsional)
-
-Penyusunan kerangka analisis, penelusuran arsip Wayback Machine, serta formulasi solver otomatis dibantu oleh AI Agent untuk mempercepat korelasi antara commit GPG dan entitas geolokasi Jawa Barat.

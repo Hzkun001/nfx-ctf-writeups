@@ -151,9 +151,3 @@ identik, sifat 16-bit `F`, dan penolakan berkas yang dimodifikasi.
 - Output verifikasi: `./assets/hard_feistel '<flag>'` → `Correct! Jaringan Feistel berhasil dibalik.`
 - Enkripsi ulang plaintext yang dipulihkan menghasilkan ciphertext identik
   (diuji otomatis).
-
-## Penggunaan AI
-
-Penyusunan solver (ronde Feistel terbalik dan penanganan offset `.data`) serta
-penyuntingan naskah writeup dibantu oleh model AI; seluruh langkah analisis dan
-verifikasi dijalankan ulang secara lokal.

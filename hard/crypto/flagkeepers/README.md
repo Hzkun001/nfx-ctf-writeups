@@ -15,11 +15,17 @@
 
 **FlagKeepers** adalah layanan audit dan disaster recovery berbasis AES-GCM.
 Layanan ini mengelola dua konteks enkripsi: `key_a` (Audit Log) dan `key_b`
-(Recovery Log). Celah fatalnya adalah kedua konteks berbagi satu nilai
-**session nonce** yang sama persis:
+(Recovery Log). Celah fatalnya adalah nonce dibuat **sekali saat layanan
+start** sebagai variabel global, lalu dipakai ulang untuk setiap enkripsi:
 
 ```python
-self.session_nonce = os.urandom(12)
+key_a = urandom(16)
+key_b = urandom(16)
+nonce = urandom(12)
+
+def encrypt(key, pt):
+    ct, tag = AES.new(key, AES.MODE_GCM, nonce=nonce).encrypt_and_digest(pt)
+    return ct, tag
 ```
 
 Penggunaan kembali nonce di bawah kunci yang sama (`key_b`) pada menu
@@ -47,10 +53,11 @@ Berkas layanan `app.py`:
 | --- | --- | --- |
 | `app.py` | 2.222 byte | `5a4aa4e5d0425fb479283507f049ca4f6a68c20bb6d62def758568dd868104ba` |
 
-Struktur enkripsi dan counter:
-- `Option 1` (Audit): mengenkripsi dengan `key_a` dan `session_nonce`, lalu mengubah variabel `idx = (idx + 16) % 256`.
-- `Option 2` (Recovery): mengenkripsi dengan `key_b` dan `session_nonce`, lalu mengubah `idx = (idx - 16) % 256`.
-- `Option 4` (Verify & Flag): meminta ciphertext dan tag, mendekripsi dengan `key_b`, memverifikasi tag GCM, lalu mengecek apakah string `b"admin = True"` ada pada `msg[:idx]`. Jika lolos, flag `/app/flag.txt` dicetak.
+Banner layanan menampilkan nama **VaultGate**. Struktur menu dan counter:
+- `Option 1` (Audit): `idx = (idx + 16) % 256`, lalu mengenkripsi log acak dengan `key_a` dan `nonce`. Plaintext, ciphertext, dan tag dicetak.
+- `Option 2` (Recovery): `idx = (idx - 16) % 256`, lalu mengenkripsi log acak dengan `key_b` dan `nonce` yang sama. Plaintext, ciphertext, dan tag juga dicetak.
+- `Option 3` (Sign): memverifikasi pesan `key_a`; tidak dipakai dalam solusi ini.
+- `Option 4` (Flag): mendekripsi dengan `key_b` dan memverifikasi tag GCM. Flag dicetak jika `b"admin = True"` ada di `msg[:idx]` **dan** `b"admin = False"` tidak ada di `msg`.
 
 ### 2. Formulasi serangan polinomial GHASH
 
@@ -86,17 +93,18 @@ $$S_b = T_1 \oplus \text{GHASH}(H_b, C_1)$$
 
 ### 4. Sinkronisasi nilai `idx` dan pemalsuan tag
 
-Untuk memenuhi syarat `b"admin = True" in msg[:idx]`:
-1. Saat awal, `idx = 0`.
-2. Setelah 3 kali memanggil `Option 2`:
+Untuk memenuhi syarat `b"admin = True" in msg[:idx]`, `idx` cukup lebih besar
+dari panjang pesan palsu (12 byte):
+1. Saat awal, `idx = 0`, sehingga `msg[:0]` kosong dan syarat pasti gagal.
+2. Setelah 3 kali memanggil `Option 2` (untuk mengumpulkan sampel):
    $$\text{idx} = (0 - 16 \times 3) \bmod 256 = 208$$
-3. Kita panggil `Option 1` sebanyak 2 kali:
-   $$\text{idx} = (208 + 16 \times 2) \bmod 256 = 240$$
-4. Keystream dipulihkan dari XOR pasangan pertama:
+   Nilai ini sudah cukup. Solver tetap memanggil `Option 1` dua kali sehingga
+   $\text{idx} = 240$; langkah itu tidak wajib, tetapi juga tidak merugikan.
+3. Keystream dipulihkan dari XOR pasangan pertama (plaintext log dicetak oleh layanan):
    $$\text{Keystream} = PT_1 \oplus CT_1$$
-5. Plaintext target adalah `target_pt = b"admin = True"`. Ciphertext palsu:
+4. Plaintext target adalah `target_pt = b"admin = True"`. Ciphertext palsu:
    $$CT_{forged} = target\_pt \oplus \text{Keystream}[:\text{len}(target\_pt)]$$
-6. Tag autentikasi palsu dihitung secara deterministik:
+5. Tag autentikasi palsu dihitung secara deterministik:
    $$Tag_{forged} = \text{GHASH}(H_b, CT_{forged}) \oplus S_b$$
 
 ### 5. Verifikasi hasil
@@ -130,7 +138,3 @@ python3 -m unittest -v
 - [assets/app.py](assets/app.py): kode sumber layanan FlagKeepers.
 - [solve.py](solve.py): implementasi penuh aritmetika medan $\text{GF}(2^{128})$, GCD polinomial, dan eksploitasi socket.
 - [test_solve.py](test_solve.py): unit test pembuktian sifat invers medan dan ketepatan faktorisasi GCD.
-
-## Penggunaan AI
-
-Formulasi aritmetika polinomial $\text{GF}(2^{128})$ dan eliminasi tag autentikasi AES-GCM (Forbidden Attack) dibantu oleh AI untuk mengoptimalkan pencarian akar persekutuan terbesar (GCD).

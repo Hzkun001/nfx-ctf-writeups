@@ -6,7 +6,7 @@
 | --- | --- |
 | Kategori | OSINT |
 | Difficulty | Medium |
-| Author | ariaf |
+| Author | Ariaf |
 | Lampiran / sumber | [assets/spotted.jpg](assets/spotted.jpg) |
 | Verifikasi | Lokal & accepted oleh platform; penelusuran registrasi PK-ADL, konfirmasi MSN 26854 via Kemenhub, kredit fotografer JetPhotos Raihan Al Faris, dan riwayat operator pertama China Xinhua Airlines terverifikasi |
 
@@ -137,7 +137,7 @@ Skrip Python mandiri disediakan untuk memvalidasi format dan komponen flag secar
 python3 solve.py
 
 # 2. Jalankan unit test otomatis
-python3 test_solve.py
+python3 -m unittest -v
 ```
 
 Keluaran solver:
@@ -165,7 +165,3 @@ Keluaran solver:
 6. [Planespotters — China Xinhua Airlines Fleet & History](https://www.planespotters.net/airline/China-Xinhua-Airlines)
 7. [FAA — Order 7340.2A Change 1 Contractions (PDF)](https://www.faa.gov/documentLibrary/media/Order/7340.2ACHG1.pdf)
 8. [TravelSky — Reservation Manual, Appendix 5: China BSP Airline Index (PDF)](https://cdn.flyscoot.com/prod/docs/default-source/doc-agents/travelsky.pdf)
-
-## Penggunaan AI
-
-Struktur writeup, tabel kronologi airframe, dan skrip verifikasi otomatis diformat dengan bantuan AI untuk memastikan keselarasan penuh terhadap standar dokumentasi repositori.

@@ -140,8 +140,9 @@ NFXCTF{g1t_d4ngl1ng_bl0b_h4v0c_5c8a19d4}
 
 Jalankan solver Python standar:
 
+Dari folder writeup ini:
+
 ```bash
-cd medium/boot-to-root/forgotten-commit
 python3 solve.py
 ```
 
@@ -156,7 +157,7 @@ Keluaran:
 
 Jalankan pengujian unit:
 ```bash
-python3 test_solve.py
+python3 -m unittest -v
 ```
 
 ## Bukti
@@ -165,8 +166,3 @@ python3 test_solve.py
 - [assets/21d5a194fb6a627b1702cbf74b51589789988b72.blob](assets/21d5a194fb6a627b1702cbf74b51589789988b72.blob): dangling blob hasil ekstraksi `git fsck`.
 - [solve.py](solve.py): skrip otomatisasi inspeksi Git dan dekripsi XOR keystream.
 - [test_solve.py](test_solve.py): unit test derivasi kunci dan verifikasi flag.
-
-## Penggunaan AI
-
-Analisis dangling blob pada struktur internal Git dan verifikasi keystream
-counter dibantu oleh AI untuk mengotomatisasi ekstraksi metadata commit.

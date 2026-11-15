@@ -128,8 +128,3 @@ Solver menghasilkan `output/freya-restored.png` dan
 gambar yang dipulihkan; solver tidak menjalankan OCR. Dekripsinya memisahkan
 header dan salt secara eksplisit sehingga tidak bergantung pada default
 panjang salt OpenSSL. Lampiran asli tidak diubah.
-
-## Penggunaan AI
-
-OpenAI Codex membantu memeriksa struktur PNG, menghitung tinggi scanline,
-menguji parameter dekripsi, serta menyusun solver dan dokumentasi.

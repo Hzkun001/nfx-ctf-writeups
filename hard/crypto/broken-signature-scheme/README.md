@@ -53,8 +53,13 @@ tangan palsu juga diverifikasi dengan `sig^e ≡ target (mod N)`.
 Ditulis `N = a² − b²` dengan `a = ceil(√N)`. Pada instance ini `a² − N`
 sudah merupakan kuadrat sempurna pada kandidat pertama, sehingga
 `p = a − b` dan `q = a + b` langsung. Gap aktual `q − p = 2^300 + 2104`,
-jauh di bawah skala yang bisa ditahan modulus 2047-bit pada langkah Fermat
-pertama; tidak diperlukan reduksi lattice ataupun Coppersmith.
+cukup kecil sehingga Fermat berhasil pada langkah pertama (syaratnya kira-kira
+`(q − p)² < 8·√N`, dan `2^600 ≪ 2^1026`).
+
+Nama flag (`l4tt1c3`, `hnp`) dan field `leak` menunjukkan jalur yang dimaksud
+pembuat soal adalah lattice/Hidden Number Problem memakai 20 bit yang bocor.
+Karena selisih prima terlalu kecil, Fermat sudah cukup; 20 bit bocor tetap dipakai
+sebagai pemeriksaan silang di bawah.
 
 Verifikasi independen dari 20 bit yang bocor:
 
@@ -89,7 +94,7 @@ Prefiks **NXCTF** dipertahankan sesuai plaintext hasil dekripsi. Bukti
 
 ## Reproduksi
 
-Dependensi: Python 3.10+ dan **pycryptodome**.
+Dependensi: Python 3.10+ dan **pycryptodome** (`pip install -r requirements.txt`).
 
 ```bash
 python3 solve.py            # memakai assets/output.txt
@@ -107,8 +112,3 @@ diubah; faktor dan tanda tangan palsu tidak dimasukkan ke repo.
 
 - [output.txt asli](assets/output.txt), SHA256 `a89d8408…d4eb7`.
 - [challenge.py](assets/challenge.py) sebagai referensi skema.
-
-## Penggunaan AI
-
-OpenAI Codex membantu merancang pencarian subset tanda tangan, faktorisasi
-Fermat, penurunan kunci SHA256(p||q).

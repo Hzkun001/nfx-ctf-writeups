@@ -18,6 +18,8 @@ $$\text{key} = \text{SHA256}(\text{MASTER} \parallel \text{counter.to\_bytes}(4,
 
 Kelemahan fatal terletak pada keterbukaan seluruh parameter pembentuk kunci: konstanta `MASTER` ditinggalkan di dalam skrip `challenge.py`, sementara nilai `counter`, `iv_hex`, dan `ct_hex` disertakan di dalam berkas `output.txt`. Dengan seluruh parameter yang terbuka secara penuh, kunci enkripsi dapat dihitung secara langsung dan ciphertext didekripsi secara deterministik.
 
+Nama flag (`cbc_1v_r3u53_l34k5_k3y5tr34m`) mengisyaratkan bahwa IV statis adalah bug pertama yang dimaksud pembuat soal. Komentar di `challenge.py` sendiri menyebut `MASTER` yang bocor sebagai "bug kedua", dan jalur kedua inilah yang langsung membuka flag, sehingga serangan IV reuse tidak diperlukan.
+
 ## Alur penyelesaian
 
 ### 1. Pemeriksaan awal & inventarisasi berkas
@@ -95,7 +97,3 @@ Keluaran solver:
 - Berkas keluaran ciphertext & parameter: [assets/output.txt](assets/output.txt).
 - Skrip pemulihan flag: [solve.py](solve.py).
 - Pengujian unit otomatis: [test_solve.py](test_solve.py).
-
-## Penggunaan AI
-
-Struktur solver dan verifikasi parsing blok CBC disusun dengan bantuan AI untuk memastikan pemulihan deterministik dan pengujian unit otomatis berjalan bersih.

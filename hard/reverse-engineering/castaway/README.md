@@ -15,12 +15,16 @@
 Binary membaca calon flag dari **stdin**, lalu memvalidasinya melalui tiga lapis
 pertahanan:
 
-1. **Anti-debug `ptrace`** — memanggil `ptrace(PTRACE_TRACEME, ...)` dan
-   menandai apakah proses sedang di-trace. Flag hasil deteksi ini dipakai sebagai
-   kunci XOR tambahan pada byte pertama input.
+1. **Anti-debug `ptrace`** — `ptrace(PTRACE_TRACEME, 0, 1, 0)` di `0x1464`.
+   Jika hasilnya `-1` (proses sedang di-debug), byte `1` disimpan dan nanti di-XOR
+   ke byte pertama hasil transformasi (`0x154c`). Saat dijalankan normal nilainya
+   `0`, jadi tidak berpengaruh; di bawah debugger, byte pertama selalu meleset
+   sehingga flag benar pun ditolak.
 2. **State machine kecil dengan opaque predicate** — variabel state mengalir
    melalui nilai `0, 1, 2, 0x32, 0x63`, dan transisi `2 → 0x32` dijaga oleh
-   predicate `(i * i) & 3 == 2` yang tampak rumit tetapi deterministik.
+   predicate `(i * i) & 3 == 2`. Kuadrat bilangan bulat modulo 4 hanya bisa
+   bernilai 0 atau 1, jadi predicate ini **selalu salah** dan cabang `0x32`
+   tidak pernah diambil.
 3. **Transformasi per-byte berantai** — setiap byte di-XOR dengan state, dirotasi,
    ditambah entri tabel, dipetakan lewat **S-box 256 entri**, lalu di-XOR dengan
    `i * 0x2f`. State kemudian diperbarui dari ciphertext byte tersebut.
@@ -74,9 +78,10 @@ st = (i + b - 125 * st) & 0xff        # state baru dari CIPHERTEXT b
 State awal `st = 0xa5`. Perhatikan `imul eax, 0xffffff83` = `-125` dan
 `imul eax, 0x2f` untuk faktor XOR.
 
-Predicate opaque `(i*i) & 3 == 2` hanya menentukan apakah state machine lanjut ke
-`0x32` atau `1`; karena deterministik terhadap `i`, ia tidak menghalangi
-pembalikan — cukup diabaikan saat membalik.
+Predicate opaque `(i*i) & 3 == 2` tidak pernah benar (`i*i mod 4 ∈ {0, 1}`),
+sehingga state machine selalu lanjut ke `1` dan cabang `0x32` adalah kode mati.
+Predicate ini aman diabaikan saat membalik. Hal yang sama berlaku untuk XOR hasil
+`ptrace` selama solver dan verifikasi tidak dijalankan di bawah debugger.
 
 ### 4. Membalik transformasi
 
@@ -149,9 +154,3 @@ masukan tidak diubah.
 - S-box permutasi penuh di `0x2020`; tabel penambah di `0x2120`; ciphertext di `0x2140`.
 - Output verifikasi: `echo '<flag>' | ./assets/castaway` → `Access granted.`
 - Reimplementasi transformasi maju menghasilkan ciphertext identik (diuji otomatis).
-
-## Penggunaan AI
-
-Penyusunan solver (rekonstruksi state berantai dan pembalikan transformasi) serta
-penyuntingan naskah writeup dibantu oleh model AI; seluruh langkah analisis dan
-verifikasi dijalankan ulang secara lokal.

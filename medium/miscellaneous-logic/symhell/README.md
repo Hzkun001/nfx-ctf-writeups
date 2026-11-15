@@ -40,7 +40,7 @@ Berkas layanan `app.py`:
 
 | Berkas | Ukuran | SHA256 |
 | --- | --- | --- |
-| `app.py` | 2.502 byte | `392dfcb55a45c00fd61a36b520f31243606fff7d7557711b92d31525e7dd5575` |
+| `app.py` | 4.185 byte | `392dfcb55a45c00fd61a36b520f31243606fff7d7557711b92d31525e7dd5575` |
 
 Kelemahan utama:
 1. **Bracket Range:** Karakter `[_-{]` dalam globbing Bash mencakup karakter
@@ -129,7 +129,3 @@ python3 -m unittest -v
 - [assets/app.py](assets/app.py): kode sumber layanan tantangan.
 - [solve.py](solve.py): generator payload dan client komunikasi socket.
 - [test_solve.py](test_solve.py): unit test validasi filter regex dan rekonstruksi payload.
-
-## Penggunaan AI
-
-Perancangan payload restriksi Bash tanpa alfanumerik dan bypass glob bracket dibantu oleh AI.

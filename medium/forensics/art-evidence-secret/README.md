@@ -91,7 +91,7 @@ NFX{LSB_3ASY_OR_H4RD_IDK}
 
 ## Reproduksi
 
-Dependensi: Python 3.10+, **Pillow**, dan **PyCryptodome**.
+Dependensi: Python 3.10+, **Pillow**, dan **PyCryptodome** (`pip install -r requirements.txt`).
 
 ```bash
 python3 solve.py            # memakai assets/original.png
@@ -108,8 +108,3 @@ diubah.
 - [Berkas PNG asli](assets/original.png), SHA256 `1d349bbf…b2c4a1`.
 - Metadata `Comment` dan `PhotoLocation` di atas.
 - Payload merah dan biru dengan header `CTF1`, keduanya terautentikasi.
-
-## Penggunaan AI
-
-OpenAI Codex membantu penelusuran metadata, pengujian urutan bit LSB,
-penyusunan rantai PBKDF2 → AES-GCM, dan penyuntingan writeup.

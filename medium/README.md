@@ -10,26 +10,26 @@ Daftar 23 challenge tingkat kesulitan **Medium** yang berhasil diselesaikan pada
 
 | Kategori | Challenge | Deskripsi Singkat |
 | --- | --- | --- |
-| **Web Exploitation** | [NexaPartner](web-exploitation/nexapartner/README.md) | Prototype pollution via settings payload untuk privilege escalation ke admin audit. |
-| | [NexaIdentity](web-exploitation/nexaidentity/README.md) | Bypass autentikasi dan kebocoran token sesi pada identity portal. |
-| **Cryptography** | [Black Box Protocol N4T0](crypto/blackbox-protocol-n4t0/README.md) | Transmisi fonetik NATO dan dekode file XML sheet manifes. |
-| | [ECDSA Nonce Bias](crypto/ecdsa-nonce-bias/README.md) | Serangan bias LSB nonce untuk pemulihan private key ECDSA. |
-| | [Unbreakable Delay](crypto/unbreakable-delay/README.md) | Optimasi aritmatika modular pada delay time-lock puzzle. |
-| | [Feistel Differential](crypto/feistel-differential/README.md) | Differential cryptanalysis pada Feistel cipher 4-round. |
-| | [Cihuy LWE](crypto/cihuy-lwe/README.md) | Lattice reduction LLL pada Learning With Errors (LWE). |
-| | [Static IV Offline](crypto/static-iv-offline/README.md) | Eksploitasi reuse Initialization Vector (IV) offline. |
-| | [RSA Coppersmith Cihuy](crypto/rsa-coppersmith-cihuy/README.md) | Teorema Coppersmith small root attack pada RSA stereotipikal. |
-| **Miscellaneous & Logic** | [Dokodemo Door](miscellaneous-logic/dokodemo-door/README.md) | Traversal stateful teleportation maze. |
-| | [The Alchemist's Sandbox](miscellaneous-logic/the-alchemists-sandbox/README.md) | Restricted Python jail escape / builtins extraction. |
-| | [Stay](miscellaneous-logic/stay/README.md) | Analisis automata node interaktif. |
-| | [Wujud Aseli Atmin](miscellaneous-logic/wujud-aseli-atmin/README.md) | File carving dan deobfuskasi gambar tersembunyi. |
-| | [SymHell](miscellaneous-logic/symhell/README.md) | Path traversal via circular symbolic links. |
-| **Forensics** | [Art Evidence Secret](forensics/art-evidence-secret/README.md) | Steganografi LSB pada artefak visual. |
-| | [Weak Handshake](forensics/weak-handshake/README.md) | Pemulihan pre-master secret / TLS key capture. |
-| **Binary Exploitation (Pwn)** | [Pipa Nu Kotor](binary-exploit-pwn/pipa-nu-kotor/README.md) | Buffer overflow & pipe descriptor hijacking. |
-| | [NFXCTF Convention](binary-exploit-pwn/nfxctf-convention/README.md) | Format string attack (leak memory & arbitrary write `%n`). |
-| **Reverse Engineering** | [Medium RC4](reverse-engineering/medium-rc4/README.md) | Analisis modifikasi KSA/PRGA RC4 pada binary ELF. |
-| | [Medium TEA](reverse-engineering/medium-tea/README.md) | Rekayasa Tiny Encryption Algorithm dengan delta kustom. |
-| **Boot to Root** | [Forgotten Commit](boot-to-root/forgotten-commit/README.md) | Git dangling commit & object history recovery. |
-| **OSINT** | [The Ghost Operator](osint/the-ghost-operator/README.md) | Snapshot Wayback Machine & geolokasi Villa Istana Bunga Lembang. |
-| | [Fresh Arrival](osint/fresh-arrival/README.md) | Tracking kargo, logistik, dan verifikasi open source data. |
+| **Web Exploitation** | [NexaPartner](web-exploitation/nexapartner/README.md) | Prototype pollution `__proto__` lewat `POST /api/settings` untuk membuka konsol audit admin. |
+| | [NexaIdentity](web-exploitation/nexaidentity/README.md) | NoSQL operator injection (`$ne`) pada `POST /login` untuk masuk sebagai admin. |
+| **Cryptography** | [Black Box Protocol N4T0](crypto/blackbox-protocol-n4t0/README.md) | Workbook tiga lapis: ejaan NATO, hex ASCII, dan reinterpretasi bit float32. |
+| | [ECDSA Nonce Bias](crypto/ecdsa-nonce-bias/README.md) | Nonce bias 8 bit → Hidden Number Problem; lattice LLL memulihkan private key. |
+| | [Unbreakable Delay](crypto/unbreakable-delay/README.md) | Faktorisasi n dari bocoran `p ⊕ q`, lalu bukti VDF Wesolowski dihitung lewat φ(n). |
+| | [Feistel Differential](crypto/feistel-differential/README.md) | Differential cryptanalysis Feistel 7 ronde; subkunci dipulihkan ronde demi ronde. |
+| | [Cihuy LWE](crypto/cihuy-lwe/README.md) | LWE dengan rahasia ternary dipecahkan lewat Kannan embedding + LLL/BKZ. |
+| | [Static IV Offline](crypto/static-iv-offline/README.md) | `MASTER` dan counter bocor sehingga kunci AES-CBC bisa diturunkan langsung. |
+| | [RSA Coppersmith Cihuy](crypto/rsa-coppersmith-cihuy/README.md) | 300 bit atas `p` diketahui; Coppersmith (Howgrave-Graham) memulihkan 212 bit sisanya. |
+| **Miscellaneous & Logic** | [Dokodemo Door](miscellaneous-logic/dokodemo-door/README.md) | PDF ter-XOR kunci berulang; kunci 16 byte dari known plaintext dan statistik kolom. |
+| | [The Alchemist's Sandbox](miscellaneous-logic/the-alchemists-sandbox/README.md) | PyJail tanpa digit/kutip lewat `getattr` + `chr`, lalu balik transformasi 32 putaran. |
+| | [Stay](miscellaneous-logic/stay/README.md) | Karakter Unicode zero-width sebagai alfabet 2 bit → Base64 → repeating-key XOR. |
+| | [Wujud Aseli Atmin](miscellaneous-logic/wujud-aseli-atmin/README.md) | ZIP tersembunyi setelah `IEND`, perbaiki signature PNG, lalu LSB kanal merah. |
+| | [SymHell](miscellaneous-logic/symhell/README.md) | Bash jail tanpa huruf/angka: glob `[_-{]`, aritmetika `$(())`, dan substring untuk membentuk `cat`. |
+| **Forensics** | [Art Evidence Secret](forensics/art-evidence-secret/README.md) | Password dari metadata PNG, dua payload AES-GCM di LSB kanal merah dan biru. |
+| | [Weak Handshake](forensics/weak-handshake/README.md) | Prima RSA berdekatan difaktorkan dengan Fermat, lalu sesi TLS 1.2 (EMS) didekripsi. |
+| **Binary Exploitation (Pwn)** | [Pipa Nu Kotor](binary-exploit-pwn/pipa-nu-kotor/README.md) | Field `flags` tak terinisialisasi diwarisi lewat reuse tcache sehingga halaman proteksi bisa ditulis. |
+| | [NFXCTF Convention](binary-exploit-pwn/nfxctf-convention/README.md) | Overwrite rank via `strcpy`, leak format string, lalu stack overflow ke `system("/bin/sh")`. |
+| **Reverse Engineering** | [Medium RC4](reverse-engineering/medium-rc4/README.md) | Kunci dan ciphertext RC4 dibaca dari `.rodata`, lalu didekripsi (RC4 simetris). |
+| | [Medium TEA](reverse-engineering/medium-tea/README.md) | Kunci TEA yang diobfuskasi sebagai `sub`/`add`, lalu dekripsi 32 ronde terbalik. |
+| **Boot to Root** | [Forgotten Commit](boot-to-root/forgotten-commit/README.md) | Kredensial dari commit lama + dangling blob via `git fsck` → kunci XOR stream. |
+| **OSINT** | [The Ghost Operator](osint/the-ghost-operator/README.md) | UID kunci GPG commit → rentry yang dihapus → Wayback Machine → geolokasi safehouse. |
+| | [Fresh Arrival](osint/fresh-arrival/README.md) | Registrasi PK-ADL → MSN 26854 → fotografer JetPhotos dan operator pertama airframe. |

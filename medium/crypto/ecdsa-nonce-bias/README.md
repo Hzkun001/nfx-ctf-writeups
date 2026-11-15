@@ -103,8 +103,3 @@ tiga tes hash tetap jalan dan dua tes lattice di-skip.
 
 - [output.txt](assets/output.txt), [pubkey.pem](assets/pubkey.pem),
   [challenge.py](assets/challenge.py) dengan SHA256 di atas.
-
-## Penggunaan AI
-
-OpenAI Codex membantu menyusun lattice HNP, pemilihan parameter
-C/M, validasi 200 tanda tangan, dan penyuntingan writeup.

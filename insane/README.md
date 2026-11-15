@@ -10,4 +10,4 @@ Dokumentasi challenge tingkat kesulitan **Insane** pada NFX CTF 2026.
 
 | Kategori | Challenge | Deskripsi Singkat |
 | --- | --- | --- |
-| **Binary Exploitation (Pwn)** | [NarrowGate](binary-exploit-pwn/narrowgate/README.md) | Full-chain heap exploitation (tcache poisoning) dengan mitigasi modern lengkap (ASLR, Full RELRO, PIE, Canary) dan eksekusi payload melalui filter ketat Seccomp sandbox. |
+| **Binary Exploitation (Pwn)** | [NarrowGate](binary-exploit-pwn/narrowgate/README.md) | Leak format string, integer truncation pada validasi ukuran, lalu ROP open/read/write karena seccomp. |

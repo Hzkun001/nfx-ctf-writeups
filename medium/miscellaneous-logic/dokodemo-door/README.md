@@ -136,8 +136,3 @@ SHA256 lampiran asli:
 
 Verifikasi dalam writeup ini dilakukan secara lokal. Bukti accepted pada
 platform belum tersedia.
-
-## Penggunaan AI
-
-OpenAI Codex membantu analisis repeating-key XOR, penyusunan dan pengujian
-solver, pembacaan stream PDF, serta penulisan dokumentasi.

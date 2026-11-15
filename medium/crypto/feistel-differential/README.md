@@ -109,8 +109,9 @@ NFXCTF{d1ff3r3nt14l_crypt0_pwn5_f31st3l_45322835}
 
 Jalankan solver Python standar (tanpa dependensi eksternal):
 
+Dari folder writeup ini:
+
 ```bash
-cd medium/crypto/feistel-differential
 python3 solve.py
 ```
 
@@ -123,7 +124,7 @@ Keluaran:
 
 Jalankan pengujian unit:
 ```bash
-python3 test_solve.py
+python3 -m unittest -v
 ```
 
 ## Bukti
@@ -133,8 +134,3 @@ python3 test_solve.py
 - [assets/flag.enc](assets/flag.enc): berkas keluaran flag terenkripsi.
 - [solve.py](solve.py): skrip analisis diferensial, penghitungan DDT, dan rekonstruksi subkunci.
 - [test_solve.py](test_solve.py): pengujian unit untuk verifikasi subkunci dan validasi flag.
-
-## Penggunaan AI
-
-Analisis DDT, propagasi *trail*, dan formulasi *round peeling* dikembangkan
-dengan bantuan AI untuk mempercepat komputasi voting pada dataset `pairs.txt`.
