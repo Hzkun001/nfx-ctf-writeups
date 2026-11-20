@@ -16,28 +16,6 @@
 [Struktur Repositori](#struktur-repositori)
 
 </div>
-
----
-
-## Scoreboard
-
-<p align="center">
-  <img src="assets/scoreboard/scoreboard-final.png" alt="Posisi scoreboard akhir NFX CTF" width="900"/>
-</p>
-
-| | |
-| --- | --- |
-| **Username CTF** | `hz-was-here` |
-| **Track** | Umum |
-| **Platform** | NFX CTF (`ctf.nfx.my.id`) |
-| **Posisi saat acara selesai** | **Peringkat #5** |
-| **Posisi pada snapshot** | Peringkat #7 — 5.445 poin |
-| **Total solve terdokumentasi** | **33 challenge** (23 Medium · 9 Hard · 1 Insane) |
-| **Bukti arsip** | [assets/scoreboard/README.md](assets/scoreboard/README.md) |
-
-> [!IMPORTANT]
-> **Catatan posisi scoreboard.** Saat kompetisi berakhir, posisi akun seharusnya berada di **Peringkat #5**. Pada tangkapan layar live dashboard (sekitar pukul 22:15 WIB, 13 November 2026), sistem masih mencatat **Peringkat #7** (5.445 poin). Tangkapan layar dilampirkan apa adanya untuk transparansi penilaian oleh panitia.
-
 ---
 
 ## Daftar Writeup
